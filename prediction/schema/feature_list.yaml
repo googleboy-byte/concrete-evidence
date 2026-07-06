@@ -1,0 +1,146 @@
+﻿# feature_list.yaml
+#
+# Predictive-model feature vocabulary for the delay-prediction branch.
+# This is the artifact the forensics branch needs to build its
+# event_types <-> predictive_feature_aliases crosswalk (the "alignment layer").
+#
+# Each feature below should map cleanly to one (or more) forensic event_type
+# categories on the other side. Where a mapping is obvious, it's noted inline
+# as `maps_to_event_type` -- treat these as draft suggestions, not final,
+# since the forensics side owns the actual event taxonomy.
+#
+# STATUS: v0.1 draft. Fill in / correct feature names once real BoQ/RFI data
+# schema is finalized. Placeholder values marked TBD should be replaced with
+# actual column names from whatever dataset you end up training on
+# (USASpending/FPDS, Kaggle, or a partner-provided dataset).
+
+schema_version: "0.1"
+owner: "delay-prediction branch"
+
+feature_groups:
+
+  rfi_features:
+    description: >
+      Features derived from RFI (Request for Information) records --
+      volume, timing, and type of RFIs raised on a project.
+    features:
+      - name: RFI_response_time_days
+        type: numeric
+        description: "Days between RFI submission and formal response"
+        maps_to_event_type: rfi_delay
+      - name: RFI_count_open
+        type: numeric
+        description: "Number of RFIs open/unanswered at time of prediction"
+        maps_to_event_type: rfi_delay
+      - name: RFI_type
+        type: categorical
+        values: ["clarification", "design_conflict", "spec_discrepancy", "field_condition"]
+        maps_to_event_type: [rfi_delay, drawing_discrepancy, incomplete_specifications]
+
+  boq_cost_features:
+    description: >
+      Bill of Quantities-derived features -- cost variance, change order
+      volume, line-item category mix.
+    features:
+      - name: change_order_count
+        type: numeric
+        description: "Number of change orders issued to date"
+        maps_to_event_type: [scope_change, change_order_dispute]
+      - name: change_order_value_pct
+        type: numeric
+        description: "Cumulative change order value as % of original contract sum"
+        maps_to_event_type: change_order_dispute
+      - name: boq_category_mix
+        type: categorical
+        description: "Dominant BoQ trade/category for the line items in question (TBD: finalize category list against ICMS or project-specific coding)"
+        maps_to_event_type: TBD
+
+  schedule_features:
+    description: >
+      Schedule/CPM-derived features -- float consumption, critical path
+      status, milestone slippage.
+    features:
+      - name: float_consumption_pct
+        type: numeric
+        description: "% of total float consumed at time of prediction"
+        maps_to_event_type: [float_consumption, critical_path_impact]
+      - name: milestone_slip_days
+        type: numeric
+        description: "Cumulative slip (days) on most recent milestone vs baseline"
+        maps_to_event_type: critical_path_impact
+      - name: concurrent_activity_flag
+        type: boolean
+        description: "Whether multiple critical-path activities are currently running concurrently under compressed schedule"
+        maps_to_event_type: concurrent_delay
+
+  procurement_material_features:
+    description: >
+      Material/procurement lead-time and availability signals.
+    features:
+      - name: lead_time_days
+        type: numeric
+        description: "Procurement lead time for material category in question"
+        maps_to_event_type: long_lead_item
+      - name: supplier_reliability_score
+        type: numeric
+        description: "TBD -- historical on-time delivery rate for supplier, if available"
+        maps_to_event_type: supplier_default
+
+  owner_client_features:
+    description: >
+      Owner/client-side timing and decision features.
+    features:
+      - name: award_to_NTP_days
+        type: numeric
+        description: "Days between contract award and Notice to Proceed"
+        maps_to_event_type: late_award
+      - name: bid_to_award_gap_days
+        type: numeric
+        description: "Days between bid submission and contract award"
+        maps_to_event_type: late_award
+      - name: payment_delay_flag
+        type: boolean
+        description: "Whether owner payments are currently in arrears past contract terms"
+        maps_to_event_type: payment_delay
+
+  site_condition_features:
+    description: >
+      Site/geotechnical signals, if available pre- or mid-construction.
+    features:
+      - name: geotech_flag
+        type: boolean
+        description: "Flag if differing/unforeseen site conditions have been reported"
+        maps_to_event_type: differing_site_conditions
+      - name: site_investigation_score
+        type: numeric
+        description: "TBD -- quality/completeness score of pre-construction site investigation, if this data exists"
+        maps_to_event_type: differing_site_conditions
+
+  contractor_features:
+    description: >
+      Contractor/subcontractor performance and resourcing signals.
+    features:
+      - name: subcontractor_default_history
+        type: numeric
+        description: "TBD -- count or flag of prior default/replacement events for subs on this project"
+        maps_to_event_type: subcontractor_default
+      - name: resource_utilization_pct
+        type: numeric
+        description: "TBD -- crew/resource utilization rate vs planned"
+        maps_to_event_type: resource_shortage
+
+  target_variable:
+    description: "What the predictive model is actually predicting"
+    options:
+      - name: delay_probability
+        type: numeric
+        description: "P(project/activity delayed beyond X days) -- classification or probability output"
+      - name: delay_days
+        type: numeric
+        description: "Regression target -- predicted magnitude of delay in days"
+    status: "TBD -- confirm which target(s) the model will output; affects how forensic evidence gets phrased (risk % vs day-count)"
+
+notes:
+  - "Every `maps_to_event_type` value here is a SUGGESTION based on the forensic branch's draft taxonomy (see prediction/schema/event_type_reference.md). The forensics owner should confirm/correct these before the crosswalk is finalized."
+  - "TBD fields need real data source decisions before this is usable -- see open_questions.md in this same folder."
+  - "Unit of prediction (project-level vs RFI-level vs activity-level) needs to be locked in; it changes which of these features are even obtainable from public data (USASpending/FPDS is project/contract-level only)."
