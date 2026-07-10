@@ -6,6 +6,7 @@ Processes the misclassified rows from the test set, queries the precedent matche
 generates a plain-English diagnosis line for each mismatch, and outputs:
   - merge/output/error_analysis.json
   - merge/output/error_analysis_report.md
+Also logs aggregate precedent coverage statistics.
 """
 
 import os
@@ -107,19 +108,26 @@ def main():
         json.dump(analysis_results, f, indent=2)
     print(f"[INFO] Wrote error analysis JSON data -> {error_analysis_json_path}")
     
-    # Compile error_analysis_report.md
-    report_path = os.path.join(_OUTPUT_DIR, "error_analysis_report.md")
-    
-    # Compute error rates
+    # Compute error and coverage rates
     err_count = len(misclassified_rows)
     err_rate = (err_count / total_test_count) if total_test_count > 0 else 0.0
+    
+    matched_count = sum(1 for entry in analysis_results if len(entry["precedents"]) > 0)
+    zero_count = err_count - matched_count
+    matched_pct = (matched_count / err_count) if err_count > 0 else 0.0
+    zero_pct = (zero_count / err_count) if err_count > 0 else 0.0
+    
+    # Compile error_analysis_report.md
+    report_path = os.path.join(_OUTPUT_DIR, "error_analysis_report.md")
     
     with open(report_path, "w") as f:
         f.write("# Forensic Precedent Error Analysis Report\n\n")
         f.write("## Overview\n")
         f.write(f"- **Total Test Tasks**: {total_test_count}\n")
         f.write(f"- **Misclassifications**: {err_count}\n")
-        f.write(f"- **Error Rate**: {err_rate:.2%}\n\n")
+        f.write(f"- **Error Rate**: {err_rate:.2%}\n")
+        f.write(f"- **Precedent Matches**: {matched_count} ({matched_pct:.1%})\n")
+        f.write(f"- **Zero Precedent Matches (Coverage Gap)**: {zero_count} ({zero_pct:.1%})\n\n")
         f.write("This report details the structural blind spots in the flat-feature XGBoost delay-prediction model ")
         f.write("by comparing its predictions with actual forensic precedents containing multi-step causal chains.\n\n")
         
@@ -152,17 +160,22 @@ def main():
                 f.write(f"- **Citation**: {top_p['citation']}\n")
                 f.write(f"- **Matched Event Types**: {', '.join(top_p['matched_event_types'])}\n\n")
                 
-                # Causal chain walk
-                f.write("##### Causal Chain DAG Walk\n")
-                if top_p["causal_chain"]:
-                    for step_idx, step in enumerate(top_p["causal_chain"], 1):
-                        f.write(f"{step_idx}. `{step['from_event_type']}` → `{step['to_event_type']}`\n")
-                        f.write(f"   - *Relationship*: {step['relationship']} (Strength: {step['causal_strength']})\n")
-                        f.write(f"   - *Source*: \"{step['from_node']}\"\n")
-                        f.write(f"   - *Target*: \"{step['to_node']}\"\n")
+                # Causal chain walks
+                f.write("##### Anchored Causal Chain Walks\n")
+                if top_p.get("causal_chains"):
+                    for chain_idx, cc in enumerate(top_p["causal_chains"], 1):
+                        f.write(f"**Chain {chain_idx} (anchored on `{cc['anchor_event_type']}` / node `{cc['anchor_node_id']}`):**\n")
+                        if cc["chain"]:
+                            for step_idx, step in enumerate(cc["chain"], 1):
+                                f.write(f"  {step_idx}. `{step['from_event_type']}` → `{step['to_event_type']}`\n")
+                                f.write(f"     - *Relationship*: {step['relationship']} (Strength: {step['causal_strength']})\n")
+                                f.write(f"     - *Source*: \"{step['from_node']}\"\n")
+                                f.write(f"     - *Target*: \"{step['to_node']}\"\n")
+                        else:
+                            f.write("  *No active causal chain path within depth limits.*\n")
+                        f.write("\n")
                 else:
-                    f.write("*No causal chain paths found for this precedent.*\n")
-                f.write("\n")
+                    f.write("*No causal chain paths found for this precedent.*\n\n")
                 
                 # Excerpts
                 f.write("##### Grounding Trial Excerpts\n")
@@ -184,6 +197,11 @@ def main():
             f.write("---\n\n")
             
     print(f"[INFO] Wrote error analysis report -> {report_path}")
+    
+    # Print summary block
+    print(f"[SUMMARY] {err_count} misclassified tasks total")
+    print(f"[SUMMARY] {matched_count} got >=1 precedent match ({matched_pct:.1%})")
+    print(f"[SUMMARY] {zero_count} got zero precedent matches — coverage gap ({zero_pct:.1%})")
 
 if __name__ == "__main__":
     main()

@@ -4,7 +4,7 @@ precedent_matcher.py
 
 Handles mapping of predictive features to forensic event types using taxonomy.yaml,
 queries the forensic_dags.db database (in read-only mode) to find matching cases,
-ranks them, and walks their causal DAGs starting from roots using DFS.
+ranks them, and walks their causal DAGs using anchored backward and forward traversals.
 """
 
 import os
@@ -29,12 +29,15 @@ CONFIDENCE_MAP = {
 def load_taxonomy(taxonomy_path=DEFAULT_TAXONOMY_PATH):
     """Loads taxonomy.yaml and builds a reverse index from feature aliases to event types."""
     if not os.path.exists(taxonomy_path):
-        # Try absolute path relative to repo root if path resolved incorrectly
+        # Try relative path from the script directory (up one level)
         alt_path = os.path.abspath(os.path.join(_THIS_DIR, "..", "taxonomy.yaml"))
         if os.path.exists(alt_path):
             taxonomy_path = alt_path
         else:
-            taxonomy_path = "/home/mainak/Desktop/concrete-evidence/taxonomy.yaml"
+            raise FileNotFoundError(
+                f"Could not locate taxonomy.yaml at '{taxonomy_path}' or '{alt_path}'. "
+                "Please verify you are running the script from within the repository structure."
+            )
 
     with open(taxonomy_path, "r") as f:
         data = yaml.safe_load(f)
@@ -59,11 +62,15 @@ def load_taxonomy(taxonomy_path=DEFAULT_TAXONOMY_PATH):
 def get_db_connection(db_path=DEFAULT_DB_PATH):
     """Opens a connection to SQLite database in read-only mode."""
     if not os.path.exists(db_path):
+        # Try relative path from the script directory (up one level)
         alt_path = os.path.abspath(os.path.join(_THIS_DIR, "..", "forensic_dags.db"))
         if os.path.exists(alt_path):
             db_path = alt_path
         else:
-            db_path = "/home/mainak/Desktop/concrete-evidence/forensic_dags.db"
+            raise FileNotFoundError(
+                f"Could not locate forensic_dags.db at '{db_path}' or '{alt_path}'. "
+                "Please verify you are running the script from within the repository structure."
+            )
             
     # Open SQLite in read-only mode
     uri = f"file:{db_path}?mode=ro"
@@ -71,20 +78,24 @@ def get_db_connection(db_path=DEFAULT_DB_PATH):
     conn.row_factory = sqlite3.Row
     return conn
 
-def match_precedents(top_shap_features, db_path=DEFAULT_DB_PATH, taxonomy_path=DEFAULT_TAXONOMY_PATH, limit=3):
+def match_precedents(top_shap_features, db_path=DEFAULT_DB_PATH, taxonomy_path=DEFAULT_TAXONOMY_PATH, limit=3, max_depth=2):
     """
     Given a list of top SHAP features (dicts with keys 'feature', 'shap_value', 'value', 'direction'),
     returns the top-limit matching precedents with their citations, matching event types,
-    and causal walk chain.
+    and causal walk chain anchored around matched event nodes.
     """
     # 1. Load taxonomy and map features to candidate event types
     feature_to_events, _ = load_taxonomy(taxonomy_path)
     
+    # Sort top_shap_features by absolute SHAP value descending and pick top 3
+    sorted_features = sorted(top_shap_features, key=lambda x: abs(x["shap_value"]), reverse=True)
+    top_3_features = sorted_features[:3]
+    
     # Select features that increased delay risk (shap_value > 0)
-    drivers = [f["feature"] for f in top_shap_features if f["shap_value"] > 0]
+    drivers = [f["feature"] for f in top_3_features if f["shap_value"] > 0]
     if not drivers:
-        # Fallback to all features if no positive contributors
-        drivers = [f["feature"] for f in top_shap_features]
+        # Fallback to all top 3 features if no positive contributors
+        drivers = [f["feature"] for f in top_3_features]
         
     query_event_types = set()
     for d in drivers:
@@ -135,6 +146,10 @@ def match_precedents(top_shap_features, db_path=DEFAULT_DB_PATH, taxonomy_path=D
         distinct_events = set(n["event_type"] for n in nodes)
         primary_score = len(distinct_events)
         
+        # Drop cases that do not have at least 2 distinct matched event types
+        if primary_score < 2:
+            continue
+            
         secondary_score = max(CONFIDENCE_MAP.get(n["extraction_confidence"], 0) for n in nodes)
         
         ranked_cases.append({
@@ -164,58 +179,76 @@ def match_precedents(top_shap_features, db_path=DEFAULT_DB_PATH, taxonomy_path=D
         cursor.execute("SELECT source_node_id, target_node_id, relationship, causal_strength, source_citation FROM edges WHERE case_id = ?", (c_id,))
         all_edges = [dict(r) for r in cursor.fetchall()]
         
-        # Build DAG adjacency and compute in-degrees
-        adj = {nid: [] for nid in all_nodes}
-        in_degrees = {nid: 0 for nid in all_nodes}
+        # Build DAG adjacency maps for backward and forward walks
+        forward_adj = {nid: [] for nid in all_nodes}
+        backward_adj = {nid: [] for nid in all_nodes}
         
         for edge in all_edges:
             src = edge["source_node_id"]
             tgt = edge["target_node_id"]
-            if src in adj and tgt in adj:
-                adj[src].append(edge)
-                in_degrees[tgt] += 1
+            if src in forward_adj and tgt in forward_adj:
+                forward_adj[src].append(edge)
+                backward_adj[tgt].append(edge)
                 
-        # Find roots (nodes with in-degree 0)
-        roots = [nid for nid, deg in in_degrees.items() if deg == 0]
-        
-        # Perform DFS walk starting from roots
-        visited = set()
-        causal_chain = []
-        
-        def dfs(node_id):
-            if node_id in visited:
+        # Helper traversals for backward and forward steps
+        def walk_backward(curr, depth, visited, collected_edges):
+            if depth >= max_depth:
                 return
-            visited.add(node_id)
-            # Traverse outgoing edges
-            # Sort target edges to ensure deterministic order (by target_node_id)
-            sorted_edges = sorted(adj[node_id], key=lambda x: x["target_node_id"])
-            for edge in sorted_edges:
+            incoming = sorted(backward_adj[curr], key=lambda x: x["source_node_id"])
+            for edge in incoming:
+                src = edge["source_node_id"]
+                edge_key = (src, curr, edge["relationship"])
+                if edge_key not in visited:
+                    visited.add(edge_key)
+                    walk_backward(src, depth + 1, visited, collected_edges)
+                    collected_edges.append(edge)
+                    
+        def walk_forward(curr, depth, visited, collected_edges):
+            if depth >= max_depth:
+                return
+            outgoing = sorted(forward_adj[curr], key=lambda x: x["target_node_id"])
+            for edge in outgoing:
                 tgt = edge["target_node_id"]
-                
-                from_desc = all_nodes[node_id]["description"]
-                to_desc = all_nodes[tgt]["description"]
-                from_et = all_nodes[node_id]["event_type"]
-                to_et = all_nodes[tgt]["event_type"]
-                
-                causal_chain.append({
-                    "from_node": from_desc,
-                    "from_event_type": from_et,
+                edge_key = (curr, tgt, edge["relationship"])
+                if edge_key not in visited:
+                    visited.add(edge_key)
+                    collected_edges.append(edge)
+                    walk_forward(tgt, depth + 1, visited, collected_edges)
+
+        # For each matched node, run the backward and forward walks
+        causal_chains = []
+        sorted_matched_nodes = sorted(match["nodes"], key=lambda x: x["node_id"])
+        
+        for node in sorted_matched_nodes:
+            matched_node_id = node["node_id"]
+            matched_event_type = node["event_type"]
+            
+            back_edges = []
+            walk_backward(matched_node_id, 0, set(), back_edges)
+            
+            fwd_edges = []
+            walk_forward(matched_node_id, 0, set(), fwd_edges)
+            
+            combined_edges = back_edges + fwd_edges
+            formatted_chain = []
+            for edge in combined_edges:
+                src = edge["source_node_id"]
+                tgt = edge["target_node_id"]
+                formatted_chain.append({
+                    "from_node": all_nodes[src]["description"],
+                    "from_event_type": all_nodes[src]["event_type"],
                     "relationship": edge["relationship"],
-                    "to_node": to_desc,
-                    "to_event_type": to_et,
+                    "to_node": all_nodes[tgt]["description"],
+                    "to_event_type": all_nodes[tgt]["event_type"],
                     "causal_strength": edge["causal_strength"]
                 })
-                dfs(tgt)
                 
-        # Walk from each root
-        for root in sorted(roots):
-            dfs(root)
+            causal_chains.append({
+                "anchor_node_id": matched_node_id,
+                "anchor_event_type": matched_event_type,
+                "chain": formatted_chain
+            })
             
-        # Walk any remaining nodes (if cycles or disconnected subgraphs exist)
-        for nid in sorted(all_nodes.keys()):
-            if nid not in visited:
-                dfs(nid)
-                
         # Format citation: case_name, court (date_filed)
         date_filed = meta.get("date_filed", "")
         year = date_filed.split("-")[0] if date_filed else "N/A"
@@ -230,13 +263,16 @@ def match_precedents(top_shap_features, db_path=DEFAULT_DB_PATH, taxonomy_path=D
                 "excerpt": n["source_excerpt"] or ""
             })
             
+        first_chain = causal_chains[0]["chain"] if causal_chains else []
+            
         results.append({
             "case_id": c_id,
             "case_name": meta["case_name"],
             "court": meta["court"],
             "citation": citation,
             "matched_event_types": list(match["distinct_events"]),
-            "causal_chain": causal_chain,
+            "causal_chain": first_chain,
+            "causal_chains": causal_chains,
             "matched_node_excerpts": matched_node_excerpts
         })
         
@@ -254,6 +290,8 @@ if __name__ == "__main__":
         print(f"Matched Precedent: {m['case_name']}")
         print(f"Citation: {m['citation']}")
         print(f"Matched Event Types: {m['matched_event_types']}")
-        print(f"Causal Walk (first 2 steps): {m['causal_chain'][:2]}")
+        print(f"Number of Anchored Causal Chains: {len(m['causal_chains'])}")
+        for i, cc in enumerate(m['causal_chains']):
+            print(f"  Chain {i+1} anchored on '{cc['anchor_event_type']}': {len(cc['chain'])} steps")
     else:
         print("[WARNING] No precedents matched.")
