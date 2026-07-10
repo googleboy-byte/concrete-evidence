@@ -1,3 +1,4 @@
+<!-- VENDORED from origin/delay-prediction — do not edit directly, re-vendor instead -->
 # Delay-Prediction Baseline (Stage 2 — Concrete Evidence)
 
 Baseline XGBoost delay-risk classifier on the **Kaggle construction task dataset**,

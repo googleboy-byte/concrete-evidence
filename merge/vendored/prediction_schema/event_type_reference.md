@@ -1,4 +1,5 @@
-﻿# Event type reference (from forensics branch, v0.1 draft)
+<!-- VENDORED from origin/delay-prediction — do not edit directly, re-vendor instead -->
+# Event type reference (from forensics branch, v0.1 draft)
 
 This is a copy of the draft causal event taxonomy proposed on the forensics side,
 kept here so the predictive branch can align feature names against it without

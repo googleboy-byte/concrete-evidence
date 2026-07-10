@@ -1,0 +1,1262 @@
+[
+  {
+    "task_id": "T102",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.14028508961200714,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.46,
+        "shap_value": -0.9106563329696655,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.72,
+        "shap_value": -0.602662205696106,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.412610151223797,
+        "shap_value": -0.524691104888916,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.26,
+        "shap_value": -0.50802081823349,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.1363636363636363,
+        "shap_value": 0.4823337495326996,
+        "direction": "+increases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 10.897313234903,
+        "shap_value": 0.25382399559020996,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T199",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.032180435955524445,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.53,
+        "shap_value": -0.7421376705169678,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.31,
+        "shap_value": -0.6921576261520386,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.0357142857142857,
+        "shap_value": -0.6439149379730225,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.22,
+        "shap_value": -0.46015435457229614,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 10.028085094391514,
+        "shap_value": -0.36358141899108887,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 9.33498205546442,
+        "shap_value": -0.2844749391078949,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1239",
+    "y_true": 0,
+    "y_pred": 1,
+    "proba": 0.7923069596290588,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "log_cost_per_labor",
+        "value": 7.2683450499759505,
+        "shap_value": 0.6371128559112549,
+        "direction": "+increases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.48,
+        "shap_value": -0.6123443841934204,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.6699999999999999,
+        "shap_value": -0.3842375576496124,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 69.0,
+        "shap_value": 0.3414730131626129,
+        "direction": "+increases"
+      },
+      {
+        "feature": "equipment_units",
+        "value": 5.0,
+        "shap_value": 0.2729378640651703,
+        "direction": "+increases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 9.059523296178186,
+        "shap_value": 0.25256672501564026,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T300",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.17891620099544525,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.43,
+        "shap_value": -0.9747799634933472,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.54,
+        "shap_value": -0.4158247709274292,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 29.0,
+        "shap_value": 0.313843309879303,
+        "direction": "+increases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.97,
+        "shap_value": -0.30132123827934265,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.0789473684210526,
+        "shap_value": -0.28938737511634827,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 11.26615703083928,
+        "shap_value": 0.12863172590732574,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1263",
+    "y_true": 0,
+    "y_pred": 1,
+    "proba": 0.5498921275138855,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "log_cost_per_labor",
+        "value": 6.123802867193308,
+        "shap_value": 0.8627565503120422,
+        "direction": "+increases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.2,
+        "shap_value": -0.8345817923545837,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 9.012104044368073,
+        "shap_value": 0.4971284866333008,
+        "direction": "+increases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.69,
+        "shap_value": -0.43560999631881714,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 9.0,
+        "shap_value": 0.22560083866119385,
+        "direction": "+increases"
+      },
+      {
+        "feature": "equipment_units",
+        "value": 3.0,
+        "shap_value": -0.15853583812713623,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T361",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.15754085779190063,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.59,
+        "shap_value": -0.9233837723731995,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 7.6411785050592975,
+        "shap_value": 0.5817813873291016,
+        "direction": "+increases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.16,
+        "shap_value": 0.49160248041152954,
+        "direction": "+increases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.33,
+        "shap_value": -0.47248154878616333,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_required",
+        "value": 16.0,
+        "shap_value": -0.4242684543132782,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 4.0,
+        "shap_value": -0.4223102033138275,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1154",
+    "y_true": 0,
+    "y_pred": 1,
+    "proba": 0.548954963684082,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.52,
+        "shap_value": -1.147097110748291,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 10.36413242070845,
+        "shap_value": 0.8210725784301758,
+        "direction": "+increases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.27,
+        "shap_value": -0.6639066934585571,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 11.46272367993271,
+        "shap_value": 0.3066365420818329,
+        "direction": "+increases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 19.0,
+        "shap_value": 0.2259998619556427,
+        "direction": "+increases"
+      },
+      {
+        "feature": "dependency_count",
+        "value": 0.0,
+        "shap_value": 0.21045199036598206,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1105",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.10939712077379227,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.6,
+        "shap_value": -0.9786070585250854,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.71,
+        "shap_value": -0.6107497811317444,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 9.005766335045658,
+        "shap_value": -0.5491807460784912,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.11,
+        "shap_value": -0.2993447482585907,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 20.0,
+        "shap_value": 0.2408917099237442,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_required",
+        "value": 5.0,
+        "shap_value": 0.21317671239376068,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T671",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.0711154118180275,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.43,
+        "shap_value": -1.0325934886932373,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.26,
+        "shap_value": -0.5058671832084656,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.69,
+        "shap_value": -0.4760441780090332,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.0519480519480519,
+        "shap_value": -0.427192747592926,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.0129870129870129,
+        "shap_value": -0.2711692154407501,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 9.394493999503196,
+        "shap_value": -0.24624121189117432,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1000",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.12058793753385544,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.41,
+        "shap_value": -0.8861740827560425,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.61011952200747,
+        "shap_value": -0.47827187180519104,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.4285714285714285,
+        "shap_value": -0.3287375867366791,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 1.2857142857142858,
+        "shap_value": -0.22416749596595764,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_required",
+        "value": 18.0,
+        "shap_value": -0.18697889149188995,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 11.50031913808022,
+        "shap_value": 0.14083519577980042,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T634",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.20211628079414368,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "site_constraint_score",
+        "value": 0.67,
+        "shap_value": -0.5274738669395447,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.3,
+        "shap_value": -0.4515745937824249,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.917678124140078,
+        "shap_value": -0.3716488480567932,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 11.48250378255464,
+        "shap_value": 0.2427046298980713,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.65,
+        "shap_value": -0.21146708726882935,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 20.0,
+        "shap_value": -0.19616791605949402,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T241",
+    "y_true": 0,
+    "y_pred": 1,
+    "proba": 0.7701175212860107,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "total_constraint_pressure",
+        "value": 1.34,
+        "shap_value": 1.4958605766296387,
+        "direction": "+increases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.66,
+        "shap_value": -1.2452360391616821,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.2,
+        "shap_value": 0.651273787021637,
+        "direction": "+increases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 5.516265908677432,
+        "shap_value": 0.4481358528137207,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.325,
+        "shap_value": 0.3897072970867157,
+        "direction": "+increases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 29.0,
+        "shap_value": 0.3840222954750061,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T629",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.018159205093979836,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.45,
+        "shap_value": -0.9848268032073975,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.025,
+        "shap_value": -0.6976649761199951,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.58,
+        "shap_value": -0.6221402287483215,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 10.32023543673124,
+        "shap_value": -0.4742072820663452,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.05,
+        "shap_value": -0.40887710452079773,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 9.62712121498267,
+        "shap_value": -0.3391735851764679,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T105",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.07132881134748459,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.6699999999999999,
+        "shap_value": -1.0118149518966675,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.32,
+        "shap_value": -0.6195709705352783,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.35,
+        "shap_value": -0.5965973734855652,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.51136790438851,
+        "shap_value": -0.4239423871040344,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 15.0,
+        "shap_value": 0.2386234700679779,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_required",
+        "value": 17.0,
+        "shap_value": -0.1877860724925995,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T628",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.2520700991153717,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.69,
+        "shap_value": -1.4959721565246582,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.2857142857142857,
+        "shap_value": 0.3810259997844696,
+        "direction": "+increases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 5.0,
+        "shap_value": -0.3449682295322418,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 9.163169446132498,
+        "shap_value": -0.31503939628601074,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.2857142857142857,
+        "shap_value": 0.2809590697288513,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_required",
+        "value": 6.0,
+        "shap_value": 0.18855223059654236,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1182",
+    "y_true": 0,
+    "y_pred": 1,
+    "proba": 0.5708533525466919,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "log_cost_per_labor",
+        "value": 10.084147730003416,
+        "shap_value": 0.9160661697387695,
+        "direction": "+increases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.47,
+        "shap_value": -0.8196529746055603,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.41,
+        "shap_value": -0.30757635831832886,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_required",
+        "value": 4.0,
+        "shap_value": 0.2850097417831421,
+        "direction": "+increases"
+      },
+      {
+        "feature": "equipment_units",
+        "value": 5.0,
+        "shap_value": 0.22236111760139465,
+        "direction": "+increases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 14.0,
+        "shap_value": 0.15879465639591217,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T228",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.08829138427972794,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.48,
+        "shap_value": -0.7648748159408569,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.46,
+        "shap_value": -0.4895821809768677,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.0428571428571428,
+        "shap_value": -0.41811540722846985,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.890505906832985,
+        "shap_value": -0.3906521201133728,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 2.0,
+        "shap_value": -0.3160010576248169,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.94,
+        "shap_value": -0.256426602602005,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T24",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.1209358498454094,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.21,
+        "shap_value": -0.9496845602989197,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.443033357777871,
+        "shap_value": -0.6360373497009277,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.32,
+        "shap_value": -0.494299054145813,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.1447368421052631,
+        "shap_value": 0.47374945878982544,
+        "direction": "+increases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.11,
+        "shap_value": -0.3390906751155853,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 10.840732797051343,
+        "shap_value": 0.21985864639282227,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1219",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.02819480560719967,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.26,
+        "shap_value": -1.1526292562484741,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 4.0,
+        "shap_value": -0.4625406265258789,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.62,
+        "shap_value": -0.42625942826271057,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.0117647058823529,
+        "shap_value": -0.41581645607948303,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 6.9265982095906224,
+        "shap_value": -0.3803507685661316,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.88,
+        "shap_value": -0.26418280601501465,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T1099",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.16115565598011017,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.62,
+        "shap_value": -0.7951194047927856,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.56,
+        "shap_value": -0.43634456396102905,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_required",
+        "value": 18.0,
+        "shap_value": -0.35827377438545227,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.3333333333333333,
+        "shap_value": 0.28907740116119385,
+        "direction": "+increases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 54.0,
+        "shap_value": -0.19096192717552185,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 11.08565590825792,
+        "shap_value": -0.16603092849254608,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T978",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.09790607541799545,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.38,
+        "shap_value": -0.7447349429130554,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.54,
+        "shap_value": -0.7402761578559875,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.869299332433416,
+        "shap_value": -0.6397978067398071,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.171875,
+        "shap_value": 0.6118220090866089,
+        "direction": "+increases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.16,
+        "shap_value": -0.3350861072540283,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 64.0,
+        "shap_value": 0.20522603392601013,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T545",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.2883185148239136,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "log_cost_per_labor",
+        "value": 7.745643579416087,
+        "shap_value": 0.9394446611404419,
+        "direction": "+increases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.48,
+        "shap_value": -0.7554408311843872,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.9375,
+        "shap_value": -0.33659595251083374,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.13,
+        "shap_value": -0.3066259026527405,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_density",
+        "value": 0.5,
+        "shap_value": -0.2437012493610382,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 7.0,
+        "shap_value": -0.19573462009429932,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T729",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.18880228698253632,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.6,
+        "shap_value": -1.2676424980163574,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.29,
+        "shap_value": -0.49220919609069824,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.8899999999999999,
+        "shap_value": -0.3005812466144562,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 7.977370520927854,
+        "shap_value": 0.24546188116073608,
+        "direction": "+increases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 22.0,
+        "shap_value": 0.20996461808681488,
+        "direction": "+increases"
+      },
+      {
+        "feature": "equipment_units",
+        "value": 5.0,
+        "shap_value": 0.19349022209644318,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T809",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.20713889598846436,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.59,
+        "shap_value": -1.3226083517074585,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 10.23287510911626,
+        "shap_value": 0.6919853687286377,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.0428571428571428,
+        "shap_value": -0.5111174583435059,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.46,
+        "shap_value": -0.4618799090385437,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 11.33146341869126,
+        "shap_value": 0.39692795276641846,
+        "direction": "+increases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 1.05,
+        "shap_value": -0.3443545699119568,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T588",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.05855006352066994,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.22,
+        "shap_value": -0.8708201050758362,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.35,
+        "shap_value": -0.6511887311935425,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "site_constraint_score",
+        "value": 0.13,
+        "shap_value": -0.6291635036468506,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 8.932008030011268,
+        "shap_value": -0.5785932540893555,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 29.0,
+        "shap_value": 0.46640604734420776,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.6470588235294118,
+        "shap_value": -0.2763949930667877,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T88",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.3278939127922058,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.6,
+        "shap_value": -1.21354341506958,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 10.30533278345389,
+        "shap_value": 0.6350852251052856,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.0365853658536585,
+        "shap_value": -0.5768688917160034,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 11.40392276906358,
+        "shap_value": 0.5713253021240234,
+        "direction": "+increases"
+      },
+      {
+        "feature": "start_constraint_days",
+        "value": 0.0,
+        "shap_value": -0.2215278446674347,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 82.0,
+        "shap_value": 0.1812184453010559,
+        "direction": "+increases"
+      }
+    ]
+  },
+  {
+    "task_id": "T610",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.38392677903175354,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "log_cost_per_labor",
+        "value": 7.525061191226292,
+        "shap_value": 0.7890951633453369,
+        "direction": "+increases"
+      },
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.35,
+        "shap_value": -0.6664799451828003,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.54,
+        "shap_value": -0.38819512724876404,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "equipment_units",
+        "value": 5.0,
+        "shap_value": 0.3634330928325653,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.4615384615384615,
+        "shap_value": -0.3124017119407654,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 39.0,
+        "shap_value": -0.2297271490097046,
+        "direction": "-decreases"
+      }
+    ]
+  },
+  {
+    "task_id": "T990",
+    "y_true": 1,
+    "y_pred": 0,
+    "proba": 0.3778812289237976,
+    "correct": false,
+    "top_shap_features": [
+      {
+        "feature": "resource_constraint_score",
+        "value": 0.29,
+        "shap_value": -0.7067047953605652,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "log_material_cost",
+        "value": 9.150758081743392,
+        "shap_value": 0.6064160466194153,
+        "direction": "+increases"
+      },
+      {
+        "feature": "log_cost_per_labor",
+        "value": 6.319241526286328,
+        "shap_value": 0.5090948939323425,
+        "direction": "+increases"
+      },
+      {
+        "feature": "labor_intensity",
+        "value": 0.6538461538461539,
+        "shap_value": -0.31143781542778015,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "total_constraint_pressure",
+        "value": 0.47,
+        "shap_value": -0.19112138450145721,
+        "direction": "-decreases"
+      },
+      {
+        "feature": "task_duration_days",
+        "value": 26.0,
+        "shap_value": -0.14764747023582458,
+        "direction": "-decreases"
+      }
+    ]
+  }
+]

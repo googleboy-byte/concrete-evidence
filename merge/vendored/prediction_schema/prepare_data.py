@@ -1,3 +1,4 @@
+# VENDORED from origin/delay-prediction — do not edit directly, re-vendor instead
 """
 prepare_data.py
 

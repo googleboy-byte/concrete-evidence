@@ -1,4 +1,5 @@
-﻿# feature_list.yaml
+# VENDORED from origin/delay-prediction — do not edit directly, re-vendor instead
+# feature_list.yaml
 #
 # Predictive-model feature vocabulary for the delay-prediction branch.
 # This is the artifact the forensics branch needs to build its
