@@ -1,0 +1,270 @@
+{
+  "schema_version": "0.1",
+  "case_id": "10650423",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "JE Dunn Construction Company",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2025-08-01",
+    "project_type": "HVAC system design and construction for healthcare clinic",
+    "government_contract_number": null
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government directed JE Dunn to redesign boilers with 15% safety factor and humidifiers for -30°F winter design temperature, effectively upsizing both systems.",
+      "date": "2020-03-10",
+      "date_confidence": "exact",
+      "source_citation": "Multiple citations throughout boiler/humidifier section",
+      "source_excerpt": "Government rejected boiler submittal on March 10, 2020 and humidifier submittal on March 30, 2020, requiring compliance with contract specifications.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government repeatedly rejected hydronic piping shop drawings with E-codes for various deficiencies including insulation issues and safety factor compliance.",
+      "date": "2020-04-17",
+      "date_confidence": "exact",
+      "source_citation": "Hydronic Piping Installation section",
+      "source_excerpt": "Multiple rejections of hydronic shop drawings between April and June 2020 for insulation, safety factor, and other technical requirements.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "geotechnical_issue",
+      "category": "site_conditions",
+      "description": "Mold discovered in ductwork requiring remediation work that overtook the project's critical path.",
+      "date": "2020-05-18",
+      "date_confidence": "exact",
+      "source_citation": "Mold remediation paragraph",
+      "source_excerpt": "Mold discovered in ductwork on May 18, 2020, remained on critical path until April 2022.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government halted hydronic piping installation pending design corrections and required JE Dunn to submit design correction narrative.",
+      "date": "2020-06-17",
+      "date_confidence": "exact",
+      "source_citation": "Letter No. C-0025 reference",
+      "source_excerpt": "ACO directed JE Dunn to provide revised design meeting contract requirements before proceeding.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "concurrent_delay",
+      "category": "schedule_management",
+      "description": "JE Dunn's delay analysis expert acknowledged possible concurrent delays overlapping with alleged government-caused delays, requiring forensic analysis to identify but none was performed.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "tr. 2/78",
+      "source_excerpt": "Ms. Meeks conceded possible concurrent project delay overlapping alleged delays that her analysis does not identify",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "critical_path_impact",
+      "category": "schedule_management",
+      "description": "Mold remediation overtook the project's critical path on June 19, 2020 and remained critical until April 2022, but was excluded from JE Dunn's delay analysis.",
+      "date": "2020-06-19",
+      "date_confidence": "exact",
+      "source_citation": "tr. 2/62-63, 66, 90, 4/19",
+      "source_excerpt": "Mold remediation overtook critical path on June 19, 2020 and was still critical in July 2020",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government rejected hydronic shop drawing submittals for insulation issues (strainers, valves) and other deficiencies starting April 17, 2020, which were not included in delay analysis.",
+      "date": "2020-04-17",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 8 at 199-200",
+      "source_excerpt": "April 17, 2020 rejection of Transmittal No. 23 64 26-5 regarding piping insulation for strainers and valves",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "JE Dunn submitted a claim to the contracting officer on July 19, 2021 demanding $949,054 and a 57-day time extension for government-directed changes to humidifiers and boilers and rejection of hydronic piping submittals.",
+      "date": "2021-07-19",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 10 at 423",
+      "source_excerpt": "JE Dunn presented to the contracting officer a claim demanding $949,054 and a time extension of 57 compensable calendar days",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government refused to approve any construction submittals until JE Dunn revised humidifier and boiler designs, preventing progress on hydronic piping installation despite no reasonable relationship between the systems.",
+      "date": "2020-05-20",
+      "date_confidence": "approximate",
+      "source_citation": "App. br. at 23",
+      "source_excerpt": "Government refused to allow JE Dunn to proceed with installation of hydronic piping until humidifier and boiler designs were revised",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n10",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government rejected JE Dunn's hydronic shop drawings submittal on May 13, 2020 due to issues including perimeter heating system, space heating, and insulation, contributing to the halt of hydronic piping installation.",
+      "date": "2020-05-13",
+      "date_confidence": "exact",
+      "source_citation": "text reference to May 13, 2020 rejection",
+      "source_excerpt": "Government rejected hydronic shop drawings on May 13, 2020 for issues including perimeter heating system, space heating, and insulation",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n11",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government lifted the hold on hydronic piping installation via July 6, 2020 letter from ACO, allowing work to proceed after previous rejections.",
+      "date": "2020-07-06",
+      "date_confidence": "exact",
+      "source_citation": "reference to July 6, 2020 ACO letter",
+      "source_excerpt": "ACO told JE Dunn on July 6, 2020 that hydronic piping installation could proceed",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n12",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government approved hydronic shop drawings on July 10, 2020, ending the submittal rejection cycle for this component.",
+      "date": "2020-07-10",
+      "date_confidence": "exact",
+      "source_citation": "reference to July 10, 2020 approval",
+      "source_excerpt": "Government approved the hydronic shop drawings on July 10, 2020",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n13",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government delayed hydronic piping installation by linking it to separate boiler and humidifier design issues despite the components being independent, preventing JE Dunn from proceeding with installation.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "multiple paragraphs throughout Part 5",
+      "source_excerpt": "Government admitted that boiler/humidifier issues were separate from hydronic piping but still linked approval, delaying critical path activity",
+      "extraction_confidence": "court_finding"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "source_node_id": "n1",
+      "target_node_id": "n2",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "Hydronic rejection references to safety factor and design requirements"
+    },
+    {
+      "edge_id": "e2",
+      "source_node_id": "n2",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "Sequence of rejections leading to ACO's design freeze directive"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n3",
+      "target_node_id": "n6",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "tr. 2/62-63, 4/19"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n7",
+      "target_node_id": "n2",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "R4, tab 8 at 199-200"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n1",
+      "target_node_id": "n8",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "R4, tab 10 at 423-45"
+    },
+    {
+      "edge_id": "e_c3_2",
+      "source_node_id": "n2",
+      "target_node_id": "n8",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "App. br. at 22-24"
+    },
+    {
+      "edge_id": "e_c3_3",
+      "source_node_id": "n1",
+      "target_node_id": "n9",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "App. br. at 22"
+    },
+    {
+      "edge_id": "e_c4_1",
+      "source_node_id": "n2",
+      "target_node_id": "n10",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "text discussion of sequential submittal rejections"
+    },
+    {
+      "edge_id": "e_c4_2",
+      "source_node_id": "n10",
+      "target_node_id": "n4",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "context of multiple submittal rejections prolonging design freeze"
+    },
+    {
+      "edge_id": "e_c4_3",
+      "source_node_id": "n11",
+      "target_node_id": "n4",
+      "relationship": "mitigated",
+      "causal_strength": "explicit",
+      "source_citation": "July 6, 2020 letter ending hold on installation"
+    },
+    {
+      "edge_id": "e_c5_1",
+      "source_node_id": "n13",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "multiple paragraphs throughout Part 5"
+    },
+    {
+      "edge_id": "e_c5_2",
+      "source_node_id": "n13",
+      "target_node_id": "n9",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "multiple paragraphs throughout Part 5"
+    },
+    {
+      "edge_id": "e_c5_3",
+      "source_node_id": "n13",
+      "target_node_id": "n10",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "multiple paragraphs throughout Part 5"
+    }
+  ],
+  "extraction_notes": [
+    "Relationship between mold discovery and other delays not clearly established in this part. Fin tube radiation equipment rejection mentioned but unclear how it relates to hydronic piping delays.",
+    "Mold remediation event (n6) appears to be the same event as n3 from previous part, but with additional critical path impact details. Maintained as separate node due to new critical path context.",
+    "The 57-day delay period referenced appears inconsistent with earlier 77/84-day claims; exact duration and critical path impact remain contested",
+    "The May 13, 2020 rejection was mentioned in hearing testimony but not in post-hearing briefing, creating some ambiguity about its formal inclusion in the case. The relationship between fin tube radiation equipment installation and hydronic piping installation remains unexplained in the text.",
+    "Court acknowledges government-caused delay but rejects JE Dunn's specific delay period quantification (57 days) due to insufficient evidence of start/end dates on critical path"
+  ]
+}

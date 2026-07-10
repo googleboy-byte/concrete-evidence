@@ -1,0 +1,184 @@
+{
+  "schema_version": "0.1",
+  "case_id": "4899305",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Anthony and Gordon Construction Co.",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2021-07-01",
+    "project_type": "aircraft component maintenance facility repair and renovation",
+    "government_contract_number": "N69450-13-C-0754"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Navy provided defective design specifications for mechanical rooms 212 and 237 that did not accurately reflect actual equipment sizes and spatial constraints, requiring design changes.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "multiple paragraphs throughout",
+      "source_excerpt": "A&G alleges Navy provided defective design specifications relating to two mechanical rooms...drawings did not accurately reflect size of equipment",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "Contractor and subcontractor could not access Building 49 until February 28, 2014 due to hexavalent chromium remediation delaying project start.",
+      "date": "2014-02-28",
+      "date_confidence": "exact",
+      "source_citation": "paragraph discussing hazardous substance abatement",
+      "source_excerpt": "Neither A&G nor Blackstock could gain access to Building 49 until after remediation completed on February 28, 2014",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Multiple RFIs submitted regarding mechanical room issues (June 6, 2014; October 17, 2014; June 18, 2015; April 25, 2016) with slow government responses causing delays.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "multiple RFI date references",
+      "source_excerpt": "Multiple RFIs submitted from June 2014 through April 2016 regarding mechanical room space and equipment issues",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Work halted pending resolution of mechanical room design issues, with discussions continuing through at least April 2015.",
+      "date": null,
+      "date_confidence": "inferred",
+      "source_citation": "paragraph discussing ongoing design discussions",
+      "source_excerpt": "Parties continued to discuss concerns regarding room 237 through at least April 2015",
+      "extraction_confidence": "implied"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "sequencing_error",
+      "category": "contractor_caused",
+      "description": "A&G and Blackstock were forced to work out of sequence from their original plan due to design issues and resolution delays.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "A&G claim description",
+      "source_excerpt": "A&G and Blackstock were forced to work out of sequence to their original plan for the work",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "critical_path_impact",
+      "category": "schedule_management",
+      "description": "Mechanical work duration increased by 135% (from planned 270 days to much longer period) due to design issues and delays.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "A&G claim quantification",
+      "source_excerpt": "Mechanical work began March 2014 scheduled for completion December 2016 - 135% increase from original 270-day plan",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "concurrent_delay",
+      "category": "schedule_management",
+      "description": "Navy engineer's analysis found an 8-day delay from design issues was overlapped by concurrent delay not part of the claim.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Navy engineer analysis section",
+      "source_excerpt": "Navy engineer concluded 8-day delay was overlapped by concurrent delay not part of this claim",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "A&G calculated delay damages of $1,533,000 using a daily general conditions rate of $1,200 applied to a 3.5-year delay period from April 2015 through August 2018.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "complaint paragraphs 36-38",
+      "source_excerpt": "A&G calculated damages by multiplying $1,200 daily rate over 3.5 years of delay, resulting in $1,533,000 in delay costs",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Dispute over A&G's entitlement to equitable adjustment for delay costs stemming from Navy's defective design drawings, with Navy challenging the damages calculation methodology.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Navy motion and Board analysis",
+      "source_excerpt": "Navy argued A&G's complaint presented different damages calculation method than certified claim, but Board found it was same claim based on same operative facts",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "source_node_id": "n1",
+      "target_node_id": "n3",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "RFI content descriptions"
+    },
+    {
+      "edge_id": "e2",
+      "source_node_id": "n1",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "design discussion timeline"
+    },
+    {
+      "edge_id": "e3",
+      "source_node_id": "n3",
+      "target_node_id": "n4",
+      "relationship": "contributed_to",
+      "causal_strength": "implied",
+      "source_citation": "ongoing design resolution process"
+    },
+    {
+      "edge_id": "e4",
+      "source_node_id": "n1",
+      "target_node_id": "n5",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "A&G claim statement"
+    },
+    {
+      "edge_id": "e5",
+      "source_node_id": "n4",
+      "target_node_id": "n5",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "A&G claim statement"
+    },
+    {
+      "edge_id": "e6",
+      "source_node_id": "n5",
+      "target_node_id": "n6",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "schedule impact description"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n1",
+      "target_node_id": "n8",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "complaint paragraphs 11-12, 26, 28-33"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n1",
+      "target_node_id": "n9",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "Board analysis throughout opinion"
+    }
+  ],
+  "extraction_notes": [
+    "Hexavalent chromium remediation classified as late_possession_of_site rather than geotechnical_issue since it relates to site access rather than soil/groundwater conditions",
+    "Testing and balancing problems mentioned but not extracted as node due to insufficient detail about specific event type",
+    "The 3.5-year delay period (n8) is alleged by contractor but not explicitly validated by the court in this excerpt. The equitable adjustment dispute (n9) involves methodological arguments about damages calculation rather than substantive entitlement questions."
+  ]
+}

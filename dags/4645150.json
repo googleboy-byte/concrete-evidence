@@ -1,0 +1,178 @@
+{
+  "schema_version": "0.1",
+  "case_id": "4645150",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Cincinnati v. Triton Servs., Inc.",
+    "court": "Ohio Court of Appeals",
+    "date_filed": "2019-08-02",
+    "project_type": "sewer interceptor and replacement projects",
+    "government_contract_number": null
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Triton encountered sloughing soils, trench cave-ins, excessive groundwater, and extremely wet conditions that materially differed from the geotechnical report's indications during sewer work on the Sagebrush Project.",
+      "date": "2011-09",
+      "date_confidence": "approximate",
+      "source_citation": "{¶11}",
+      "source_excerpt": "Triton discovered differing soil conditions than expected, including sloughing soils, trench cave-ins, excessive groundwater, and wet conditions causing increased expenses.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "geotechnical_issue",
+      "category": "site_conditions",
+      "description": "Excessive groundwater and saturated soils caused compromised trench walls and required additional trench protection measures during pipe operations.",
+      "date": "2012-03",
+      "date_confidence": "approximate",
+      "source_citation": "{¶18}, {¶20}",
+      "source_excerpt": "Saturated and sloughing soils necessitated more substantial trench boxes and caused compromised trench walls during mainline pipe operations.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Work on the Sagebrush Project came to a standstill in March 2012 while waiting for MSD's proposal to address differing site conditions before continuing.",
+      "date": "2012-03-15",
+      "date_confidence": "exact",
+      "source_citation": "{¶17}",
+      "source_excerpt": "Differing site conditions brought Triton's work to a standstill, waiting on a proposal from MSD to continue work.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Triton encountered unforeseen ground conditions during bore operations at manhole number three between November 1-11, 2011, requiring additional work and compensation.",
+      "date": "2011-11-01",
+      "date_confidence": "exact",
+      "source_citation": "¶27",
+      "source_excerpt": "unforeseen ground conditions during the bore at manhole number three between November 1 and 11, 2011",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Triton encountered unforeseen ground conditions at manholes three through six between February 27-April 9, 2012, requiring additional work and compensation.",
+      "date": "2012-02-27",
+      "date_confidence": "exact",
+      "source_citation": "¶28",
+      "source_excerpt": "unforeseen ground conditions at manholes three through six between February 27, 2012, and April 9, 2012",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Triton encountered undocumented, unsuitable ground conditions throughout the project requiring additional compensation of $534,321.65 using total-cost method.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "¶30",
+      "source_excerpt": "undocumented, unsuitable ground conditions throughout the project requesting $534,321.65 using total-cost method",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Dispute arose over Triton's differing-site-conditions claims leading to litigation, including city's motions to exclude evidence and testimony regarding damages calculation.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "¶31-32",
+      "source_excerpt": "city filed motions to exclude testimony on damages for differing-site-conditions claim and evidence due to spoliation",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Triton claimed unabsorbed home-office-overhead damages due to project suspension from September 2012 to June 2013, but court found no evidence of city-caused standby status or inability to take replacement work.",
+      "date": "2012-09-01",
+      "date_confidence": "approximate",
+      "source_citation": "¶58-61",
+      "source_excerpt": "Triton contends city caused nine-month suspension from September 2012 to June 2013, but record shows Triton worked on replacement projects and was not on standby.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Court reversed trial court's dismissal of Triton's differing-site-conditions claim due to erroneous exclusion of evidence, remanding for new trial.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "¶67",
+      "source_excerpt": "Court held trial court erred in excluding evidence regarding differing site conditions and damages testimony, making dismissal erroneous.",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c1_1",
+      "source_node_id": "n1",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "{¶11}, {¶18}, {¶20}"
+    },
+    {
+      "edge_id": "e_c1_2",
+      "source_node_id": "n1",
+      "target_node_id": "n3",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "{¶17}"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n1",
+      "target_node_id": "n4",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "¶27-28"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n1",
+      "target_node_id": "n5",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "¶28"
+    },
+    {
+      "edge_id": "e_c2_3",
+      "source_node_id": "n1",
+      "target_node_id": "n6",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "¶30"
+    },
+    {
+      "edge_id": "e_c2_4",
+      "source_node_id": "n1",
+      "target_node_id": "n7",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "¶31-32"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n3",
+      "target_node_id": "n8",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "¶58-59"
+    }
+  ],
+  "extraction_notes": [
+    "Water main breaks mentioned in {¶15} may contribute to geotechnical issues but are not fully classified; requires review of causal linkage to saturated soils.",
+    "Multiple differing site conditions events (n4, n5, n6) appear to be specific instances of the general n1 condition. Edges show contribution relationship rather than strict causation due to descriptive nature.",
+    "Node n8 classified as unclassified because the described event (claim for unabsorbed overhead due to suspension) does not fit any predefined event_type precisely. It relates to delay impacts but is specifically about overhead cost claims rather than the delay cause itself.",
+    "Edge from n3 (design_freeze) to n8 is based on Triton's allegation that city-caused delays led to overhead claims, though court ultimately rejected this causation.",
+    "No new causal events related to construction delays or project execution described in this part. The text focuses solely on procedural litigation matters (frivolous conduct claims, fraud allegations, and appellate procedures) that do not constitute causal events in the construction project timeline."
+  ]
+}

@@ -1,0 +1,214 @@
+# taxonomy.yaml
+#
+# THE ALIGNMENT LAYER
+#
+# This file is the single source of truth mapping:
+#   (a) causal event types extracted from forensic case DAGs, to
+#   (b) categories, to
+#   (c) the predictive model's actual feature names (from prepare_data.py)
+#
+# Both the DAG extraction script and the evidence-matching script import
+# this file. Do not duplicate this mapping elsewhere -- if the predictive
+# model's feature set changes, this is the only file that should need
+# updating on the forensic side.
+#
+# Versioned deliberately: as you extract more cases, you WILL find event
+# types that don't fit cleanly. Add them here rather than inventing
+# one-off categories inside extraction prompts.
+
+version: "0.1"
+
+categories:
+  site_conditions:
+    description: "Physical/subsurface site conditions differing from expectations"
+  design_information:
+    description: "Delays or gaps in design information, RFIs, drawings, specs"
+  weather_seasonal:
+    description: "Weather or seasonal timing effects on work"
+  procurement_material:
+    description: "Material sourcing, cost, or delivery issues"
+  owner_client_caused:
+    description: "Delay/impact originating from owner/client actions or decisions"
+  contractor_caused:
+    description: "Delay/impact originating from contractor resourcing or performance"
+  regulatory_thirdparty:
+    description: "Permits, inspections, agency approvals, third-party utility delays"
+  schedule_management:
+    description: "Critical path, float, concurrency, and scheduling-technique effects"
+  financial:
+    description: "Liquidated damages, equitable adjustment, change order cost disputes"
+
+event_types:
+  differing_site_conditions:
+    category: site_conditions
+    description: >
+      Actual site/subsurface conditions materially differ from what was
+      indicated in contract documents (Type I/II DSC claims).
+    predictive_feature_aliases:
+      - site_constraint_score
+      - total_constraint_pressure
+
+  geotechnical_issue:
+    category: site_conditions
+    description: "Soil, groundwater, or foundation-related complication."
+    predictive_feature_aliases:
+      - site_constraint_score
+
+  rfi_delay:
+    category: design_information
+    description: "Delay in RFI submission/response causing downstream schedule impact."
+    predictive_feature_aliases:
+      - dependency_count # proxy: unresolved dependencies pending info
+      - high_dependency
+
+  design_freeze:
+    category: design_information
+    description: "Work halted pending design clarification or resolution."
+    predictive_feature_aliases:
+      - dependency_count
+      - high_dependency
+
+  seasonal_timing_shift:
+    category: weather_seasonal
+    description: >
+      Award/start timing shifted work into an unfavorable season
+      (e.g. winter excavation vs. planned summer start).
+    predictive_feature_aliases:
+      - start_constraint_days
+
+  weather_delay:
+    category: weather_seasonal
+    description: "Direct weather event impacting work (storm, flood, extreme temp)."
+    predictive_feature_aliases:
+      - start_constraint_days
+      - task_duration_days
+
+  material_shortage:
+    category: procurement_material
+    description: "Material unavailable, delayed delivery, or long-lead item impact."
+    predictive_feature_aliases:
+      - log_material_cost
+      - log_cost_per_labor
+
+  supplier_default:
+    category: procurement_material
+    description: "Supplier/subcontractor failed to deliver material or perform."
+    predictive_feature_aliases:
+      - log_material_cost
+      - resource_constraint_score
+
+  late_award:
+    category: owner_client_caused
+    description: "Contract award later than bidder anticipated, compressing schedule."
+    predictive_feature_aliases:
+      - start_constraint_days
+
+  late_possession_of_site:
+    category: owner_client_caused
+    description: "Owner delayed handing over site access to contractor."
+    predictive_feature_aliases:
+      - start_constraint_days
+      - site_constraint_score
+
+  scope_change:
+    category: owner_client_caused
+    description: "Owner-directed change order altering scope after award."
+    predictive_feature_aliases:
+      - log_material_cost
+      - log_cost_per_labor
+
+  resource_shortage:
+    category: contractor_caused
+    description: "Insufficient labor or equipment allocated relative to task demand."
+    predictive_feature_aliases:
+      - labor_required
+      - equipment_units
+      - resource_constraint_score
+      - labor_intensity
+      - equipment_density
+
+  subcontractor_default:
+    category: contractor_caused
+    description: "Subcontractor failed to perform, requiring replacement/rework."
+    predictive_feature_aliases:
+      - resource_constraint_score
+      - labor_intensity
+
+  sequencing_error:
+    category: contractor_caused
+    description: "Work performed out of planned sequence, causing rework/delay."
+    predictive_feature_aliases:
+      - dependency_count
+      - high_dependency
+
+  permit_delay:
+    category: regulatory_thirdparty
+    description: "Delay obtaining a required permit or regulatory approval."
+    predictive_feature_aliases:
+      - start_constraint_days
+
+  inspection_failure:
+    category: regulatory_thirdparty
+    description: "Failed inspection requiring rework before proceeding."
+    predictive_feature_aliases:
+      - dependency_count
+
+  critical_path_impact:
+    category: schedule_management
+    description: >
+      Court/expert finding that an event directly impacted the critical
+      path (as opposed to only consuming float).
+    predictive_feature_aliases:
+      - task_duration_days
+      - is_long_duration
+      - total_constraint_pressure
+
+  concurrent_delay:
+    category: schedule_management
+    description: "Two or more independent delay causes overlapping in time."
+    predictive_feature_aliases:
+      - dependency_count
+      - high_dependency
+
+  acceleration_directive:
+    category: schedule_management
+    description: "Owner/contractor directed acceleration to recover schedule."
+    predictive_feature_aliases:
+      - task_duration_days
+      - resource_constraint_score
+
+  liquidated_damages_trigger:
+    category: financial
+    description: "Delay resulted in assessment of liquidated damages."
+    predictive_feature_aliases:
+      - log_cost_per_labor
+
+  equitable_adjustment_dispute:
+    category: financial
+    description: "Dispute over cost/time recovery via equitable adjustment claim."
+    predictive_feature_aliases:
+      - log_material_cost
+      - log_cost_per_labor
+
+# ---------------------------------------------------------------------------
+# KNOWN GAPS (be honest about these -- don't silently paper over them)
+# ---------------------------------------------------------------------------
+# - The predictive model's current 14 features (from Kaggle synthetic data)
+#   have NO direct RFI-count or RFI-response-time feature yet, despite the
+#   project's original BoQ/RFI framing. `dependency_count` / `high_dependency`
+#   are used here as loose proxies for RFI-driven blocking, but this is an
+#   approximation, not a real RFI signal. Revisit this mapping once real
+#   RFI-level data is sourced.
+# - `resource_constraint_score` and `total_constraint_pressure` are
+#   composites/derived from other features in prepare_data.py -- when doing
+#   SHAP-based matching, prefer grouping these with their source features
+#   rather than treating them as fully independent signals (see multicollinearity
+#   note from prior discussion).
+# - Several event types currently map to the same 1-2 features
+#   (e.g. rfi_delay and design_freeze both -> dependency_count). This means
+#   the predictive model, as currently built, CANNOT DISTINGUISH between
+#   these causal mechanisms -- it can only say "dependency pressure was high."
+#   The forensic DAG retrieval is what disambiguates which mechanism actually
+#   applies, by finding matched precedent. Don't overstate the predictive
+#   model's resolution in write-ups -- be precise that feature-level and
+#   node-level granularity currently differ.

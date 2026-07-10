@@ -1,0 +1,165 @@
+{
+  "schema_version": "0.1",
+  "case_id": "4764320",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "GSC Construction, Inc.",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2020-06-04",
+    "project_type": "Army Ranger barracks renovation",
+    "government_contract_number": "W912HN-10-D-0049"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "Government failed to provide as-built drawings for Building 2833 in a timely manner after contract award, delaying design work",
+      "date": "2013-01-25",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 3-4",
+      "source_excerpt": "Government requested proposal for additional work due to design changes caused by delayed as-built drawings",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government issued Modification No. 1A for design changes at Building 2833, adding $59,781.11 and 30 days to contract",
+      "date": "2013-02-22",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 4",
+      "source_excerpt": "Government accepted GSC's proposal and issued Modification No. 1A for changes and delays related to design changes",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Concrete slabs for Building 2833 floors were out of plumb and exceeded flatness tolerance specified in contract",
+      "date": "2013-07-29",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 7",
+      "source_excerpt": "GSC notified government of differing site conditions regarding concrete slab flatness and plumb issues",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government exercised options 1-3 adding work via Modification No. 02, extending performance period by 175 days",
+      "date": "2013-08-13",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 8",
+      "source_excerpt": "Government exercised options 1-3 and added work by Modification No. 02, extending completion to December 6, 2014",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Building 2834 flooded with 4 inches of water in basement due to water line failure and leaking water main",
+      "date": "2016-03-05",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 13",
+      "source_excerpt": "Two-inch water line came apart, flooding building with four inches of water in basement",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Another leak occurred in Building 2834 causing flooding with up to 6 feet of water after repair failure",
+      "date": "2016-04-03",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 14",
+      "source_excerpt": "Repair failed and basement flooded with six feet of water, other areas with two feet of water",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "subcontractor_default",
+      "category": "contractor_caused",
+      "description": "Subcontractor Dynamix Mechanical abandoned performance prior to completion, requiring GSC to engage a replacement subcontractor and causing damages of $632,995.61",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 18",
+      "source_excerpt": "GSC received judgment against subcontractor Chris Leiser d/b/a Dynamix Mechanical for abandoning performance prior to completion",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government assessed liquidated damages of $127,675.36 due to GSC's late finish, which exceeded the unpaid contract balance",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 19(7)",
+      "source_excerpt": "Contracting officer found government entitled to $127,675.36 in liquidated damages due to GSC's late finish",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government issued unilateral Modification Nos. 1G and 1H for fire alarm system changes, providing cost compensation and a 10-day time extension but disputing GSC's claimed 70-day critical path impact.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Issue 5 discussion",
+      "source_excerpt": "Government issued two unilateral modifications for fire alarm system additional work, paying costs under Modification No. 1G and granting a 10-day time extension under Modification No. 1H.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n10",
+      "event_type": "critical_path_impact",
+      "category": "schedule_management",
+      "description": "GSC claimed fire alarm changes caused 70-day critical path delay, but court found no evidence supporting critical path impact beyond government's granted 10-day extension.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Issue 5 discussion",
+      "source_excerpt": "GSC's fragnet included handwriting stating fire alarm changes affected critical path, but no overall schedule or logic was submitted to explain how this work would affect critical path.",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1_2",
+      "source_node_id": "n1",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "paragraph 4"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n7",
+      "target_node_id": "n8",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "paragraph 19(3)"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n9",
+      "target_node_id": "n10",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "Issue 5 discussion"
+    },
+    {
+      "edge_id": "e_c3_2",
+      "source_node_id": "n10",
+      "target_node_id": "n8",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "Issue 5 discussion (implied connection to liquidated damages)"
+    }
+  ],
+  "extraction_notes": [
+    "Multiple scope changes mentioned but not all clearly classified as delay-causing events. Progressive collapse requirements mentioned but unclear if they caused delays.",
+    "The causal link between subcontractor default (n7) and liquidated damages (n8) is alleged by GSC but disputed by the government, who argued GSC failed to explain government responsibility for subcontractor default",
+    "Fire alarm change critical path impact was alleged by GSC but rejected by court due to lack of supporting evidence - marked as alleged_only strength",
+    "Connection between fire alarm delays and liquidated damages (n8) is implied but not explicitly stated in this part",
+    "No new causal events or relationships described in this final part. The text primarily discusses legal arguments about liquidated damages calculations and completion dates, but these are outcomes/resolutions rather than new causal events. The liquidated damages assessment (n8) and critical path impact determination (n10) were already extracted from earlier parts."
+  ]
+}

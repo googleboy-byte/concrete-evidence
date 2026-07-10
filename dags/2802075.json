@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.1",
+  "case_id": "2802075",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Old Veteran Construction, Inc. v. United States",
+    "court": "United States Court of Federal Claims",
+    "date_filed": "2015-05-19",
+    "project_type": "Army Reserve Center construction",
+    "government_contract_number": "W912QR-11-C-0049"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "On-site lean clay proved unsuitable as load bearing support for building construction despite contract specifications indicating it could be used, requiring excavation and replacement with imported gravel.",
+      "date": "2012-01-18",
+      "date_confidence": "exact",
+      "source_citation": "RFI submission paragraph",
+      "source_excerpt": "Proof roll test failed due to saturated/frozen clay conditions, making soil unsuitable for placement under building as specified.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "geotechnical_issue",
+      "category": "site_conditions",
+      "description": "Clay soil was saturated with water and frozen during winter excavation, preventing its use as structural fill material as planned.",
+      "date": "2012-01-18",
+      "date_confidence": "exact",
+      "source_citation": "RFI submission paragraph",
+      "source_excerpt": "Due to time of year, clay was saturated with water and ground frozen, making soil unsuitable for placement under building.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "late_award",
+      "category": "owner_client_caused",
+      "description": "Contract award occurred on September 20, 2011, significantly later than the May 2011 bid submission date, compressing the construction schedule.",
+      "date": "2011-09-20",
+      "date_confidence": "exact",
+      "source_citation": "Award date mention",
+      "source_excerpt": "Contract awarded on September 20, 2011, after May 2011 bid submission, shifting work into winter months.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "seasonal_timing_shift",
+      "category": "weather_seasonal",
+      "description": "Delayed contract award shifted excavation work from planned summer months into unfavorable winter conditions, impacting soil workability.",
+      "date": "2012-01-13",
+      "date_confidence": "exact",
+      "source_citation": "Schedule and RFI references",
+      "source_excerpt": "Excavation work occurred in January 2012 instead of summer months as anticipated, during unfavorable winter conditions.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Plaintiff claimed $321,561 for costs incurred from excavating and replacing unsuitable lean clay with imported gravel, but the government denied payment and disputed the legal basis for recovery under the Differing Site Conditions clause.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "multiple paragraphs throughout text",
+      "source_excerpt": "Plaintiff alleges costs of $321,561 for digging out and replacing lean clay with gravel, but contracting officer declined payment increase and plaintiff never cited contractual basis.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "permit_delay",
+      "category": "regulatory_thirdparty",
+      "description": "Contractor was required to obtain bond approval and submit it to government for further approval, with government stating contractor was late in submitting required documents, delaying construction start.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "final paragraph of excerpt",
+      "source_excerpt": "Contractor required to receive bond approval and submit to government, was late in submitting documents, delaying ability to begin construction.",
+      "extraction_confidence": "implied"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c1_1",
+      "source_node_id": "n3",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "OVC's equitable adjustment request"
+    },
+    {
+      "edge_id": "e_c1_2",
+      "source_node_id": "n4",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "RFI submission and equitable adjustment request"
+    },
+    {
+      "edge_id": "e_c1_3",
+      "source_node_id": "n2",
+      "target_node_id": "n1",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "RFI submission and complaint allegations"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n1",
+      "target_node_id": "n5",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "multiple paragraphs discussing the claim"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n4",
+      "target_node_id": "n1",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "text discussing seasonal timing and soil conditions"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n6",
+      "target_node_id": "n4",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "final paragraph of excerpt"
+    }
+  ],
+  "extraction_notes": [
+    "The causal chain (late award → seasonal shift → geotechnical issues → differing site conditions) is alleged by plaintiff but contested by government. The court has not yet ruled on these causal relationships in this part of the opinion.",
+    "Court found plaintiff failed to prove Type I differing site conditions claim because encountered conditions matched geotechnical report predictions for winter, making conditions foreseeable. Edge n4→n1 reflects court's finding that seasonal shift contributed to the soil issues.",
+    "The bond approval delay appears to be a separate permitting/approval issue that contributed to the seasonal timing shift, but the exact causal relationship is not fully developed in the text"
+  ]
+}

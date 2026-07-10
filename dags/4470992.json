@@ -1,0 +1,144 @@
+{
+  "schema_version": "0.1",
+  "case_id": "4470992",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "L.C. Gaskins Construction Co., Inc.",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2018-02-14",
+    "project_type": "construction with steel work and containment systems",
+    "government_contract_number": null
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Government's motion for reconsideration of entitlement decision regarding 25 days of compensatory delay related to containment request modification P00009",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "opening paragraphs",
+      "source_excerpt": "Government moves for reconsideration of entitlement decision regarding 25 days of compensatory delay related to Mod. P00009",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Bilateral modification P00009 granted 50-day extension for government's review/approval delay of additional containment request",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "section 1",
+      "source_excerpt": "Mod. P00009 granted 50-calendar-day extension related to review and approval of additional containments request",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "subcontractor_default",
+      "category": "contractor_caused",
+      "description": "Welding subcontractor Garrison Steel caused delays and rework due to defective welds requiring repairs and reinspection",
+      "date": "2010-12-07",
+      "date_confidence": "exact",
+      "source_citation": "section discussing Mr. Lowe's analysis",
+      "source_excerpt": "Welding subcontractor caused significant loss in productivity due to rework required and repair nature of welding work",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "concurrent_delay",
+      "category": "schedule_management",
+      "description": "Concurrent delays from welding subcontractor issues overlapping with government-caused delays from September 2010 through project end",
+      "date": "2010-09-01",
+      "date_confidence": "approximate",
+      "source_citation": "section on Mr. Lowe's failure to consider concurrent delay",
+      "source_excerpt": "Concurrent delay throughout period caused by welding contractor from September 2010 through end of project",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Discovery of hazardous levels of chromium in spent blast debris that materially differed from conditions disclosed in RFP, where government represented waste would be non-hazardous despite known hazardous materials in paint coatings.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Section 5, multiple paragraphs",
+      "source_excerpt": "Discovery of hazardous levels of chromium in spent blast debris differed materially from conditions disclosed in RFP related to risk of hazardous waste",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "Government's inability to provide DLA-approved hazardous waste containers in timely manner between 14 March 2011 and 20 May 2011, necessitating temporary storage solutions.",
+      "date": "2011-03-14",
+      "date_confidence": "exact",
+      "source_citation": "Section 4, multiple paragraphs",
+      "source_excerpt": "Government informed Gaskins on 14 March 2011 that Mayport HWSF could not provide DLA containers, unable to provide them timely until 20 May 2011",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "Gaskins hired additional workers (increasing from 9 to up to 20) due to inefficiencies from transferring waste to temporary containers while waiting for DLA containers.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Section 4",
+      "source_excerpt": "DACA increased as-bid 9 workers to up to 20 workers necessitated by inefficiencies from transferring debris to temporary storage",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government claimed 32 days of delay triggering liquidated damages, but board found Gaskins entitled to 48 days of excusable delay preventing LD assessment.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Section 6",
+      "source_excerpt": "Government cannot support claim for liquidated damages based on 32 days of delay due to Gaskins' entitlement to 48 days excusable delay",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "source_node_id": "n3",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "concurrent delay section"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n5",
+      "target_node_id": "n6",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "Section 4, footnote 3"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n6",
+      "target_node_id": "n7",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "Section 4"
+    },
+    {
+      "edge_id": "e_c2_3",
+      "source_node_id": "n5",
+      "target_node_id": "n8",
+      "relationship": "mitigated",
+      "causal_strength": "court_finding",
+      "source_citation": "Section 6"
+    }
+  ],
+  "extraction_notes": [
+    "Modification P00009 events are procedural/contractual actions rather than physical delay events",
+    "The 'containment request' delay appears related to design/approval process but doesn't fit cleanly into existing categories",
+    "Welding issues could be classified as either subcontractor_default or inspection_failure - chose subcontractor_default based on primary causation",
+    "The hazardous waste container delay (n6) could potentially be classified as 'supplier_default' but fits better under 'material_shortage' as government was providing materials directly",
+    "The relationship between DSC (n5) and container delay (n6) is explicitly stated in footnote 3 but requires careful reading",
+    "Part 3 contains only administrative signatures and certification text with no substantive case events or causal relationships described"
+  ]
+}

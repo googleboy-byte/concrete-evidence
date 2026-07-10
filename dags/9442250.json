@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1",
+  "case_id": "9442250",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Radmacher Brothers Excavating Co., Inc.",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2023-10-27",
+    "project_type": "construction improvements to lower Turkey Creek with underground piping under active railroad tracks",
+    "government_contract_number": "W912DQ-17-C-1095"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Appellant claimed stationary trains on railroad tracks constituted a Type II differing site condition that was unknown and unexpected, causing delays to boring and jacking operations.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Paragraph 17 and summary judgment discussion",
+      "source_excerpt": "Appellant argued stationary trains were an unknown or unexpected condition allowing recovery as type 2 differing site condition",
+      "extraction_confidence": "contested"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Appellant submitted RFI No. 0025 regarding boring operations when trains were parked on tracks, seeking clarification on work restrictions and potential compensation for delays.",
+      "date": "2019-02-27",
+      "date_confidence": "exact",
+      "source_citation": "Paragraph 11",
+      "source_excerpt": "Appellant submitted RFI No. 0025 asking if boring was prohibited when stationary trains remained and if time/money adjustments would be provided",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government response to RFI No. 0025 imposed restrictions prohibiting pipe jacking when trains were stopped on tracks unless boring head had passed through loading zone.",
+      "date": "2019-03-29",
+      "date_confidence": "exact",
+      "source_citation": "Paragraph 12",
+      "source_excerpt": "Government answered that pipe jacking shall not be permitted when train was stopped on track unless boring head had passed through loading zone",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c1_1",
+      "source_node_id": "n1",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "Paragraph 11 and claim context"
+    },
+    {
+      "edge_id": "e_c1_2",
+      "source_node_id": "n3",
+      "target_node_id": "n1",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "Paragraph 12 and claim context"
+    }
+  ],
+  "extraction_notes": [
+    "The stationary trains condition is classified as Type II DSC based on appellant's claim, but the court has not made a final determination on its validity",
+    "The causal relationship between stationary trains and RFI submission is implied from the sequence of events described"
+  ]
+}

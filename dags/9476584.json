@@ -1,0 +1,547 @@
+{
+  "schema_version": "0.1",
+  "case_id": "9476584",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "BCI Construction USA, Inc.",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2024-02-05",
+    "project_type": "dam stilling basin repair and drainage system construction",
+    "government_contract_number": "W912DQ-17-C-1070"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Contract included liquidated damages clause requiring $860 per day for delays in completion, with government calculating rate based on oversight staff costs and concurrent project assumptions.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 5, 11",
+      "source_excerpt": "IFB incorporated FAR 52.211-12 with $860 daily liquidated damages; government calculation considered staff costs and concurrent projects.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "BCI began mobilization at the site over seven months after issuance of the Notice to Proceed, indicating delayed site access or start.",
+      "date": "2018-03-20",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 16",
+      "source_excerpt": "BCI arrived at site on March 20, 2018, over seven months after Notice to Proceed issuance.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Government issued a Stop Work Order due to impending high water releases from Tuttle Creek Lake, requiring backfilling and evacuation to prevent flooding.",
+      "date": "2019-05-29",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 17",
+      "source_excerpt": "Stop Work Order issued due to need for high water releases, directing backfill and evacuation to avoid flooding.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "BCI alleged the Stop Work Order resulted from a differing site condition, but government acknowledged it as a change entitling adjustment, not a DSC.",
+      "date": "2019-09-09",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 18",
+      "source_excerpt": "BCI claimed Stop Work Order was due to differing site condition; government denied DSC but acknowledged change and adjustment entitlement.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Government granted a 3-day time extension for weather-related delay via Modification No. A00008.",
+      "date": "2019-07-11",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 19",
+      "source_excerpt": "Modification A00008 provided 3-day extension for weather delay.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "Government disapproved BCI's concrete mix design using Class F Fly Ash on April 26, 2018, stating it did not meet alkali-silica reactivity mitigation requirements with calcium oxide content exceeding 8% and total equivalent alkali content over 1.5%.",
+      "date": "2018-04-26",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 28",
+      "source_excerpt": "Government disapproved use of Class F Fly Ash stating it does not meet requirements for mitigation of Alkali-Silica Reactivity with calcium oxide content exceeding 8%",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "BCI submitted RFI-0021 on May 7, 2018, requesting approval of their preferred fly ash, but government responded on May 9, 2018, rejecting the request and suggesting alternative materials.",
+      "date": "2018-05-07",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 30",
+      "source_excerpt": "BCI submitted RFI-0021 recommending approval of their fly ash, but government responded that specification was not part of contract and suggested using GGBF slag instead",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "MCM stated they could not substitute alternative materials for fly ash due to plant limitations serving multiple customers and limited silo space, making material substitution impractical.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 31",
+      "source_excerpt": "MCM could not substitute other materials due to plant limitations serving multiple customers and limited silo space",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Government announced winter drawdown of Tuttle Creek Lake starting November 25, 2020, with 3000 cfs releases for approximately 10 days, acknowledging this would impact critical path activities.",
+      "date": "2020-11-25",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 39",
+      "source_excerpt": "Government informed BCI of winter drawdown releases starting November 25, 2020, acknowledging impacts to critical path",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n10",
+      "event_type": "critical_path_impact",
+      "category": "schedule_management",
+      "description": "BCI responded that winter drawdown would impact all available work, inundate existing excavations, and require suspension of onsite activities until drawdown completion.",
+      "date": "2020-11-24",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 40",
+      "source_excerpt": "BCI stated drawdown would impact critical path activities, inundate excavations, and require suspension of all work",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n11",
+      "event_type": "geotechnical_issue",
+      "category": "site_conditions",
+      "description": "BCI experienced excessive seepage of water into the project site from a hillside outside construction limits, caused by a buried electric line installed by another contractor in 2016.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraphs 47-48",
+      "source_excerpt": "Excessive seepage occurred from hillside outside construction limits caused by buried electric line installed by another contractor",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n12",
+      "event_type": "geotechnical_issue",
+      "category": "site_conditions",
+      "description": "Water began flowing from the electrical seep on April 27, 2019, intermittently seeping heavily into the project's northwest corner and impacting work, requiring container movement.",
+      "date": "2019-04-27",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 53",
+      "source_excerpt": "BCI's April 27, 2019 QCR documents water flowing from electric line impacting work, with intermittent heavy seepage requiring container movement.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n13",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "BCI alleged 59-day delay in delivery of manhole covers from Oldcastle Infrastructure due to COVID-19 production issues impacting critical path activities.",
+      "date": "2020-07",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 67",
+      "source_excerpt": "BCI alleged 59-day delay in Oldcastle material delivery due to COVID-19 production issues affecting critical path, with order placed July 2020.",
+      "extraction_confidence": "contested"
+    },
+    {
+      "node_id": "n14",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "BCI sought COVID-19 related time extensions and costs for subcontractor Nicholson, alleging pandemic impacts including travel restrictions and potential work suspension.",
+      "date": "2020-03",
+      "date_confidence": "approximate",
+      "source_citation": "paragraphs 58-61",
+      "source_excerpt": "Nicholson issued travel options memo due to COVID-19; BCI and Nicholson raised concerns about pandemic impacts on schedule and requested potential suspension.",
+      "extraction_confidence": "implied"
+    },
+    {
+      "node_id": "n15",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "BCI alleged that existing riprap exceeded the monolith joint where concrete removal/placement was required, creating a differing site condition that prevented completion of contract work without removal.",
+      "date": "2018-11-17",
+      "date_confidence": "exact",
+      "source_citation": "¶77-79",
+      "source_excerpt": "BCI asserts existing riprap exceeded monolith joint where concrete work was to occur and could not complete contract work without removing some grouted riprap.",
+      "extraction_confidence": "contested"
+    },
+    {
+      "node_id": "n16",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government issued revised drawings requiring installation of thickened slab for sidewalks via Modification No. A00013/R00020, altering the original contract requirements.",
+      "date": "2020-11-18",
+      "date_confidence": "exact",
+      "source_citation": "¶83",
+      "source_excerpt": "Government issued revised drawings requiring thickened slab for sidewalks through modification with November 18, 2020 effective date.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n17",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "BCI requested government confirmation of sidewalk design via RFI-0055, stating the design lacked relief for concrete contraction and proposing joint details.",
+      "date": "2020-09-30",
+      "date_confidence": "exact",
+      "source_citation": "¶84",
+      "source_excerpt": "BCI requested government confirm sidewalk design which lacked concrete contraction relief and proposed joint layout details.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n18",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government formally notified BCI of liquidated damages assessment at $860 per day beginning July 12, 2020, due to missed July 11, 2020 completion date.",
+      "date": "2020-07-23",
+      "date_confidence": "exact",
+      "source_citation": "¶86",
+      "source_excerpt": "Government informed BCI that $860 per day liquidated damages would be held beginning July 12, 2020 for missing completion date.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n19",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "BCI challenged government's liquidated damages assessment as unwarranted and without justifiable cause, disputing the validity of the damages.",
+      "date": "2020-09-09",
+      "date_confidence": "exact",
+      "source_citation": "¶87",
+      "source_excerpt": "BCI challenged liquidated damages assessment as unwarranted, unnecessary and without justifiable cause.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n20",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Winter drawdown of Tuttle Creek Lake caused by weather conditions, inflows, and temperatures, resulting in excusable but noncompensable delays per FAR 52.249-10.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph discussing winter drawdown cause",
+      "source_excerpt": "Winter drawdown events are outside control of both parties and caused by weather, making delays excusable but noncompensable under FAR clause.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n21",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government assessed liquidated damages at $860 per day for missed completion date, with BCI challenging the reasonableness of the rate calculation methodology.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "BCA reasoning section on liquidated damages",
+      "source_excerpt": "BCI argues liquidated damages rate was improperly calculated with inflated personnel costs based on incorrect concurrent project assumptions.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n22",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government assessed liquidated damages from April 23, 2021 (BCI's claimed substantial completion date) until July 15, 2021 (actual acceptance date), which BCI disputes as improper after substantial completion.",
+      "date": "2021-04-23",
+      "date_confidence": "exact",
+      "source_citation": "Partial/Substantial Completion section",
+      "source_excerpt": "BCI argues it is entitled to remittance of liquidated damages assessed from April 23, 2021 (alleged substantial completion) until July 15, 2021 (government acceptance)",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n23",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Government identified 104 incomplete items as of June 16, 2021, including repairs to stilling basin walls, electric work, and grouted riprap reinstallation, which they argued were not mere punch list items.",
+      "date": "2021-06-16",
+      "date_confidence": "exact",
+      "source_citation": "SOF ¶ 89",
+      "source_excerpt": "Government's June 16, 2021 letter listed 104 incomplete items including stilling basin wall repairs, electric work, and grouted riprap reinstallation",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n24",
+      "event_type": "geotechnical_issue",
+      "category": "site_conditions",
+      "description": "Water seepage from a buried electrical line outside construction limits caused excessive water entering the project site's northwest side, which BCI claimed as a differing site condition.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "BCI's Excessive Seepage Claim section",
+      "source_excerpt": "Water entered excavation through seep in earthen dam caused by buried electric line installed by another contractor in 2016",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n25",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "BCI alleges the electrical seep constituted a Type II differing site condition where water entering the work site from outside construction limits differed materially from conditions indicated in contract documents.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "opening paragraphs",
+      "source_excerpt": "BCI claims electrical seep water entering site was Type II DSC, but government argues DSC clause only applies to conditions existing at contract execution",
+      "extraction_confidence": "contested"
+    },
+    {
+      "node_id": "n26",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Government alleges BCI failed to provide proper written notice of the differing site condition as required by FAR 52.236-2 before disturbing conditions, potentially prejudicing investigation.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Notification of Differing Site Condition section",
+      "source_excerpt": "Government argues BCI failed to give required written notice before disturbing conditions, potentially prejudicing ability to investigate solutions",
+      "extraction_confidence": "implied"
+    },
+    {
+      "node_id": "n27",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "BCI seeks recovery under superior knowledge doctrine, alleging government knew about wet conditions at electrical seep site but failed to disclose vital information affecting performance costs/duration.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "superior knowledge discussion",
+      "source_excerpt": "BCI argues government had superior knowledge of wet conditions at electrical seep that affected performance costs, but government denies knowing water would enter project site",
+      "extraction_confidence": "contested"
+    },
+    {
+      "node_id": "n28",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "BCI seeks recovery of COVID-19 related costs under the theory that government-caused delays pushed work into the pandemic period, while the government argues COVID-19 was unforeseeable and not compensable under the fixed-price contract.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "multiple paragraphs throughout text",
+      "source_excerpt": "BCI alleges government should be responsible for increased COVID-19 costs subsequent to Stop Work Order, while government maintains pandemic was not foreseeable",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n29",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Board grants government's motion for summary judgment on BCI's COVID-19 cost claim, finding contractor not entitled to additional compensation for pandemic-related costs under fixed-price contract.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "text discussing summary judgment ruling",
+      "source_excerpt": "government's motion for summary judgment challenging BCI's claim for alleged additional costs incurred because of COVID-19 is granted",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n30",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Board rejects government's sovereign acts defense for COVID-19 claim, finding no government breach of contract and no COVID-related directives issued to contractor.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "sovereign acts defense section",
+      "source_excerpt": "government cannot rely upon sovereign act defense as basis to deny BCI's COVID-19 claim, request for summary judgment on this issue denied",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n31",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government issued unilateral Modification No. R00026 awarding BCI $24,559.11 for installation of sidewalk isolation joints and sealant, adding 7 days to contract completion date.",
+      "date": "2023-03-16",
+      "date_confidence": "exact",
+      "source_citation": "SOF ¶ 109",
+      "source_excerpt": "Government issued unilateral Modification No. R00026, dated March 16, 2023, awarding BCI additional costs for installation of isolation joints and sealing on the sidewalk",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c1_1",
+      "source_node_id": "n3",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "paragraph 18"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n6",
+      "target_node_id": "n7",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "paragraphs 28-30"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n6",
+      "target_node_id": "n8",
+      "relationship": "contributed_to",
+      "causal_strength": "explicit",
+      "source_citation": "paragraphs 28, 31"
+    },
+    {
+      "edge_id": "e_c2_3",
+      "source_node_id": "n9",
+      "target_node_id": "n10",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "paragraphs 39-40"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n11",
+      "target_node_id": "n12",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraphs 52-53"
+    },
+    {
+      "edge_id": "e_c3_2",
+      "source_node_id": "n14",
+      "target_node_id": "n13",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "paragraph 67"
+    },
+    {
+      "edge_id": "e_c4_1",
+      "source_node_id": "n15",
+      "target_node_id": "n1",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "¶77-79"
+    },
+    {
+      "edge_id": "e_c4_2",
+      "source_node_id": "n16",
+      "target_node_id": "n17",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "¶83-84"
+    },
+    {
+      "edge_id": "e_c4_3",
+      "source_node_id": "n18",
+      "target_node_id": "n19",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "¶86-87"
+    },
+    {
+      "edge_id": "e_c5_1",
+      "source_node_id": "n20",
+      "target_node_id": "n9",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "paragraph discussing winter drawdown cause"
+    },
+    {
+      "edge_id": "e_c5_2",
+      "source_node_id": "n1",
+      "target_node_id": "n21",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_disputed",
+      "source_citation": "BCA reasoning section on liquidated damages"
+    },
+    {
+      "edge_id": "e_c6_1",
+      "source_node_id": "n22",
+      "target_node_id": "n18",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "Partial/Substantial Completion section"
+    },
+    {
+      "edge_id": "e_c6_2",
+      "source_node_id": "n24",
+      "target_node_id": "n11",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "BCI's Excessive Seepage Claim section"
+    },
+    {
+      "edge_id": "e_c6_3",
+      "source_node_id": "n24",
+      "target_node_id": "n12",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "BCI's Excessive Seepage Claim section"
+    },
+    {
+      "edge_id": "e_c7_1",
+      "source_node_id": "n24",
+      "target_node_id": "n25",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "throughout electrical seep discussion"
+    },
+    {
+      "edge_id": "e_c7_2",
+      "source_node_id": "n25",
+      "target_node_id": "n26",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "Notification of Differing Site Condition section"
+    },
+    {
+      "edge_id": "e_c7_3",
+      "source_node_id": "n25",
+      "target_node_id": "n27",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "superior knowledge discussion"
+    },
+    {
+      "edge_id": "e_c8_1",
+      "source_node_id": "n3",
+      "target_node_id": "n28",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "text discussing Stop Work Order and subsequent delays"
+    },
+    {
+      "edge_id": "e_c8_2",
+      "source_node_id": "n28",
+      "target_node_id": "n14",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "text discussing COVID-19 impacts on subcontractor Nicholson"
+    },
+    {
+      "edge_id": "e_c8_3",
+      "source_node_id": "n28",
+      "target_node_id": "n13",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "text discussing material delivery delays from Oldcastle Infrastructure"
+    },
+    {
+      "edge_id": "e_c9_1",
+      "source_node_id": "n16",
+      "target_node_id": "n31",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "SOF ¶ 109"
+    },
+    {
+      "edge_id": "e_c9_2",
+      "source_node_id": "n17",
+      "target_node_id": "n31",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "government's concession of entitlement"
+    }
+  ],
+  "extraction_notes": [
+    "Stop Work Order causation is contested: BCI alleged DSC, government denied but acknowledged change. Node n4 captures this dispute.",
+    "The concrete mix approval process involved multiple submissions and rejections spanning several weeks, but specific delay duration is contested between parties",
+    "COVID-19 impacts were classified as unclassified because they don't fit cleanly into existing categories - involves pandemic-related labor/travel issues rather than traditional material shortages or weather events",
+    "The causal link between COVID-19 and material delays (n14 to n13) is contested between parties regarding timing and responsibility",
+    "Riprap condition allegation marked as contested due to government denial that removal was necessary for completion. Sidewalk design issue involves both scope change and design freeze elements.",
+    "Winter drawdown event (n20) appears to be the same event previously described in n9, but this part provides additional causal explanation linking it to weather. Edge created to connect the explanation to existing node.",
+    "Substantial completion date (April 23, 2021) is contested between parties - BCI claims it, government disputes",
+    "The 104 incomplete items represent disputed facts about project completion status rather than a clear delay event",
+    "Multiple legal theories (DSC, superior knowledge) applied to same underlying geotechnical water seepage event from n24, creating contested causal relationships",
+    "Notice failure allegation (n26) is procedural rather than causal event, classified as unclassified",
+    "The COVID-19 cost claim dispute involves complex legal theories (foreseeability, fixed-price contract risk allocation) that don't fit neatly into standard delay categories. The sovereign acts defense rejection is a legal ruling rather than a causal event. The riprap claim discussion at the end appears incomplete as the text cuts off.",
+    "The text discusses multiple legal arguments and procedural motions but only one new concrete event (Modification R00026) that qualifies for node extraction. Other discussions are legal procedural matters rather than factual events."
+  ]
+}

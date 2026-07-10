@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "case_id": "4841822",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Granite Construction Company",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2020-12-03",
+    "project_type": "dam construction - outlet structures and cutoff walls at Addicks and Barker dams",
+    "government_contract_number": "W9126G-15-C-0037"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Hurricane Harvey made landfall in Texas, bringing heavy rain and flooding to the Houston area including the project site at Addicks and Barker Dams.",
+      "date": "2017-08-25",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 6",
+      "source_excerpt": "Hurricane Harvey made landfall on the coast of Texas bringing rain and flooding to the Houston area including the project site",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "US Army Corps of Engineers issued a suspension of work order for construction activities at Addicks and Barker dam sites due to Hurricane Harvey flooding.",
+      "date": "2017-08-28",
+      "date_confidence": "exact",
+      "source_citation": "paragraphs 10, 12",
+      "source_excerpt": "COE directed suspension of work retroactive to August 28, 2017 through October 15, 2017 totaling 49 calendar days",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1_2",
+      "source_node_id": "n1",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "paragraphs 6, 10, 16"
+    }
+  ],
+  "extraction_notes": [
+    "The suspension order appears to be a government-directed work stoppage rather than a traditional site possession delay, but fits best under late_possession_of_site as it prevented access to work areas",
+    "Part 2/3: extraction failed for this part (all models exhausted) -- content from this part may be missing.",
+    "Part 3/3: extraction failed for this part (all models exhausted) -- content from this part may be missing."
+  ]
+}

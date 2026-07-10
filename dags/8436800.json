@@ -1,0 +1,127 @@
+{
+  "schema_version": "0.1",
+  "case_id": "8436800",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Phylway Construction, LLC",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2022-10-11",
+    "project_type": "Mississippi River levee construction with Deep Soil Mixing",
+    "government_contract_number": "W912P819C0015"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Mississippi River levels exceeded 11 feet at Carrolton gauge for 230 days in 2019 and 171 days in 2020, preventing levee construction work per contract restrictions.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "APFF ¶¶ 26-27; app supp. R4, tab 4 at APP377-95",
+      "source_excerpt": "In 2019, the river exceeded +11.0 feet on 230 days... In 2020, the river exceeded +11.0 feet... on 171 days",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "JAFEC subcontractor was unable to perform Deep Soil Mixing work during extended high river periods due to contract work restrictions.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "app. resp. ex. 4, Declaration of Thomas P. Hymel",
+      "source_excerpt": "During these extended high water periods, Phylway's subcontractor JAFEC was unable to perform the DSM levee work",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Phylway requested equitable adjustment for increased costs due to high river delays but government declined the requests.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "text describing Phylway's requests",
+      "source_excerpt": "Phylway's requests for equitable adjustment were declined by USACE",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Phylway submitted multiple requests for equitable adjustment for costs due to high river shutdowns, but the government denied compensation each time, maintaining only non-compensable time extensions were allowed under contract terms.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "multiple letters referenced throughout text",
+      "source_excerpt": "Phylway notified government of REA intention May 4, 2020; government denied May 7, 2020; subsequent denials on June 30, 2020 and March 31, 2021",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "Phylway experienced interruption to slag delivery due to closure of the Illinois River, impacting construction operations.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "R4, tab 25 at GOV649",
+      "source_excerpt": "Phylway submitted REA for interruption to slag delivery due to closure of Illinois River",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "The Board found that Phylway's claims were barred by accord and satisfaction due to releases signed in bilateral modifications that provided time extensions as full compensation for delays including high river levels.",
+      "date": "2022-10-11",
+      "date_confidence": "exact",
+      "source_citation": "final decision section",
+      "source_excerpt": "Phylway's claims are barred by accord and satisfaction due to releases in bilateral modifications that provided time extensions as full compensation for delays",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1_2",
+      "source_node_id": "n1",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "text describing high water impacts"
+    },
+    {
+      "edge_id": "e2_3",
+      "source_node_id": "n2",
+      "target_node_id": "n3",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "text linking inability to work with cost increases and adjustment requests"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n1",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "multiple REA references throughout text"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n1",
+      "target_node_id": "n3",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "government denial letters referencing contract terms"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n1",
+      "target_node_id": "n6",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "discussion of modifications addressing high river delays"
+    }
+  ],
+  "extraction_notes": [
+    "High river levels could potentially be classified as 'differing_site_conditions' but contract specifically allocated this risk to contractor through High River Work Restrictions clause, making 'weather_delay' more appropriate per contract terms",
+    "The equitable adjustment dispute (n4) appears to be the same ongoing dispute as n3 from previous part, but with additional specific denial events described in this part. The slag delivery interruption (n5) lacks specific dates and causal connections to other events.",
+    "The accord and satisfaction finding is a legal conclusion rather than a causal event, hence classified as unclassified. The high river levels (n1) contributed to the modifications that led to the accord and satisfaction bar."
+  ]
+}

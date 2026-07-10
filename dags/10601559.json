@@ -1,0 +1,623 @@
+{
+  "schema_version": "0.1",
+  "case_id": "10601559",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "A4 Construction Company, Inc",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2025-05-16",
+    "project_type": "military training facilities construction",
+    "government_contract_number": "W9128F-19-C-0016, W9128F-19-C-0018"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "March 2020 earthquake in Utah caused A4's architect to be out of communication for two days, impacting project workflow.",
+      "date": "2020-03",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 4",
+      "source_excerpt": "A4 claimed an earthquake in Utah resulted in its architect being out of communication for two days",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "COVID-19 pandemic caused workflow disruptions and delays on the Mountaineering Contract project.",
+      "date": "2020-03 to 2020-06",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 4",
+      "source_excerpt": "COVID-19 pandemic caused workflow disruptions during March 1 through June 30, 2020",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Heavy rain on July 15, 2020 caused drainage to flow onto the construction site from surrounding areas, requiring erosion control and site remediation.",
+      "date": "2020-07-15",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 8",
+      "source_excerpt": "July 15, 2020 heavy rain resulted in drainage flowing onto the site from surrounding areas impacting the project",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "USACE requested change to gas main line from two to four inches and elimination of electrical lift station, requiring A4 to submit a revised proposal.",
+      "date": "2020-08-25",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 13",
+      "source_excerpt": "USACE requested A4 submit a proposal for various changes including change in gas main line from two to four inches",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "subcontractor_default",
+      "category": "contractor_caused",
+      "description": "BZ Phase subcontractor abandoned the job of pouring and finishing interior concrete slabs on the mountaineering project, requiring replacement.",
+      "date": "2021-09-13",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 22",
+      "source_excerpt": "BZ Phase, a subcontractor, apparently abandoned the job of pouring and finishing interior concrete slabs",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "July 2021 flooding caused runoff from other government sites impacting the mountaineering project, resulting in damage and delays.",
+      "date": "2021-07",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 25",
+      "source_excerpt": "July 2021 flooding resulted in run off from other government sites impacting the mountaineering project",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "COVID-19 supply chain delays caused extended delivery period for Void Forms replacement from 3 days to 20 days after July 2021 flooding damage.",
+      "date": "2021-08-11",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 26",
+      "source_excerpt": "Void Form delivery period of 20 days from August 11 to August 31 due to COVID-19 supply chain issues",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "COVID-19 caused delays and adverse weather prevented A4 from obtaining Rooftek roofing materials, resulting in 14 delay days.",
+      "date": "2021-10-26",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 29",
+      "source_excerpt": "COVID-19 caused delays and adverse weather prevented A4 from obtaining Rooftek roofing materials",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "USACE requested A4 submit proposal for floor openings and supports for Hydroworx 2000 therapy pool as part of HPTC project, requiring design and construction changes.",
+      "date": "2020-05-28",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 46",
+      "source_excerpt": "On May 28, 2020, USACE requested A4 submit proposal for floor openings and supports for Hydroworx 2000 prefabricated therapy pool",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n10",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "USACE requested A4 submit proposal for design and construction of cognitive training lab within HPTC training center, requiring additional work.",
+      "date": "2020-10-27",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 50",
+      "source_excerpt": "On October 27, 2020, USACE requested A4 submit proposal for design and construction of cognitive training lab",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n11",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "USACE requested A4 submit proposal for providing alternative gym flooring at HPTC training facility, changing material specifications.",
+      "date": "2021-04-23",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 54",
+      "source_excerpt": "On April 23, 2021, USACE requested A4 submit proposal for alternative gym flooring",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n12",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court found Modification A00001 acted as accord and satisfaction for earthquake delay claims, releasing government from further liability for March 2020 earthquake impacts.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph discussing Modification A00001",
+      "source_excerpt": "Modification A00001 meets requirements for accord and satisfaction on earthquake claim, with clear release language covering further equitable adjustments.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n13",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court found Modification A00002 addressed July 2020 flooding and COVID-19 impacts, releasing government from liability for July 2020 weather-related claims.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "July 2020 Flooding Claim section",
+      "source_excerpt": "Modification A00002 covered weather and COVID-19 impacts in July 2020 with unambiguous release language for further equitable adjustments.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n14",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court found Modification A00007 addressed gas piping change claims, releasing government from additional costs and delays associated with the scope change.",
+      "date": "2021-10",
+      "date_confidence": "approximate",
+      "source_citation": "gas piping change discussion",
+      "source_excerpt": "Modification A00007 accepted A4's proposed price for gas main change and included release from any additional liability for this change.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n15",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "A4's subcontractors incurred increased costs for electronic security and audio-visual systems due to COVID-19 pandemic supply chain impacts.",
+      "date": "2021-03-30",
+      "date_confidence": "exact",
+      "source_citation": "Options 0004, 0006 & 0007 Claim section",
+      "source_excerpt": "Subcontractors had increased costs for Options 0006 and 0007 due to COVID-19 pandemic impacts on procurement and installation.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n16",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court denied government summary judgment on COVID-19 delay claims for Options 0006 and 0007, finding Modification P00002 didn't act as accord and satisfaction.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Options claim discussion",
+      "source_excerpt": "Modification P00002 was option exercise only, not addressing COVID-19 impact claims, and contained no release language.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n17",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court denied government summary judgment on COVID-19 roofing delay claims, finding unclear if Modification A00005 covered the 14-day roofing material delay.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "COVID-19 Delays in Procuring Roofing Materials section",
+      "source_excerpt": "Unclear whether Modification A00005 covered roofing delay claim as record doesn't show when roofing delay occurred.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n18",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court granted partial summary judgment on BZ Phase and Void Forms claims but denied for other July 2021 flood runoff claims, finding Modification P00003 unclear on coverage.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "BZ Phase Subcontractor Replacement and July 2021 Flooding section",
+      "source_excerpt": "Modification P00003 covered COVID-19 supply chain impacts for BZ Phase replacement and Void Forms but unclear if covered other flood runoff claims.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n19",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Government moved for summary judgment barring A4 from claiming COVID-19 delays during March 1, 2020 to May 31, 2021, arguing these claims were barred by accord and satisfaction through bilateral modifications A00001-A00005.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "gov't mot. at 44-46",
+      "source_excerpt": "Government moves for summary judgment on COVID-19 impacts during March 1, 2020 to May 31, 2021, contending claims are barred by accord and satisfaction through modifications A00001-A00005.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n20",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court granted summary judgment for government on COVID-19 delay claims during March 1, 2020 to May 31, 2021, finding modifications A00001-A00005 constituted accord and satisfaction with clear release language.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "SOF ¶¶ 6,10,31,34,36",
+      "source_excerpt": "Board grants summary judgment on COVID-19 claims during March 2020-May 2021, finding modifications with release language constitute accord and satisfaction.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n21",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Government moved for summary judgment on COVID-19 impacts during August 11-31, 2021, arguing Modification P00003 acted as accord and satisfaction for these claims.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "gov't mot. at 44",
+      "source_excerpt": "Government contends A4's claims for COVID-19 impacts during August 11-31, 2021 are barred by Modification P00003 as accord and satisfaction.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n22",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court found Modification P00003 only covered COVID-19 delays related to BZ Phase subcontractor replacement and Void Forms, not other COVID-19 delays during August 11-31, 2021.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "SOF ¶ 28",
+      "source_excerpt": "Board finds P00003 is accord and satisfaction only for COVID-19 delays associated with BZ Phase and Void Forms, not other COVID-19 delays during that period.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n23",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Government moved for summary judgment on HPTC contract claims for earthquake and COVID-19 impacts during March-August 2020, arguing Modification A00002 acted as accord and satisfaction.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "gov't mot. at 47",
+      "source_excerpt": "Government moves for summary judgment on HPTC claims for earthquake and COVID-19 impacts March-August 2020, contending Modification A00002 is accord and satisfaction.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n24",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court granted summary judgment on HPTC earthquake and COVID-19 claims, finding Modification A00002 with clear release language constituted accord and satisfaction for March-August 2020 impacts.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "SOF ¶¶ 39-40",
+      "source_excerpt": "Board grants summary judgment on HPTC earthquake/COVID-19 claims, finding Modification A00002 with release language constitutes accord and satisfaction.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n25",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Government moved for summary judgment on A4's Hydroworx pool claims, arguing Modification P00003 acted as accord and satisfaction with clear release language.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "gov't mot. at 48-49",
+      "source_excerpt": "Government moves for summary judgment on Hydroworx pool claims, contending Modification P00003 is accord and satisfaction with release.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n26",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court granted summary judgment on Hydroworx pool claims, finding Modification P00003 met all requirements for accord and satisfaction with unambiguous release.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "SOF ¶¶ 47-48",
+      "source_excerpt": "Board grants summary judgment on Hydroworx pool claims, finding P00003 is accord and satisfaction with clear release language.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n27",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Government moved for summary judgment on cognitive training lab claims, arguing Modification P00004 acted as accord and satisfaction with release language.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "gov't mot. at 49-50",
+      "source_excerpt": "Government moves for summary judgment on cognitive lab claims, contending Modification P00004 is accord and satisfaction with release.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n28",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court granted summary judgment on cognitive lab claims, finding Modification P00004 met all requirements for accord and satisfaction with comprehensive release.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "SOF ¶¶ 51-52",
+      "source_excerpt": "Board grants summary judgment on cognitive lab claims, finding P00004 is accord and satisfaction with unambiguous release covering all costs.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n29",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Government moved for summary judgment on gym flooring claims, arguing Modification A00007 acted as accord and satisfaction with release language.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "gov't mot. at 51",
+      "source_excerpt": "Government moves for summary judgment on gym flooring claims, contending Modification A00007 is accord and satisfaction with release.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n30",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "Court granted summary judgment on gym flooring claims, finding Modification A00007 met all requirements for accord and satisfaction with clear release language.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "SOF ¶¶ 55-56",
+      "source_excerpt": "Board grants summary judgment on gym floor claims, finding A00007 is accord and satisfaction with unambiguous release covering all costs.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n31",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "A4 contended that modifications containing releases were signed under economic duress due to government threats to impose liquidated damages and withhold payments/schedule approvals if A4 did not sign.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "app. opp'n at 41-42 and declarations",
+      "source_excerpt": "A4 provided declarations asserting USACE personnel threatened to impose liquidated damages and not approve schedule/payments if A4 did not sign modifications",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n32",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "A4 contended that modifications containing releases were signed under economic duress due to government threats to impose liquidated damages and withhold payments/schedule approvals if A4 did not sign.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 16-17 and surrounding text",
+      "source_excerpt": "A4 argued government coerced signing through threats of liquidated damages and withholding progress payments/schedule approvals",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n33",
+      "event_type": "equitable_adjustment_dispute",
+      "category": "financial",
+      "description": "A4 contended releases should be voided as contrary to public policy because USACE personnel were unaware of OMB COVID-19 guidance memorandum and failed to inform A4.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "app. opp'n at 43-44",
+      "source_excerpt": "A4 argued USACE personnel unaware of OMB COVID-19 memorandum and failed to inform A4 of its contents regarding equitable adjustments",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n2",
+      "target_node_id": "n5",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "paragraph 22"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n6",
+      "target_node_id": "n7",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraph 26"
+    },
+    {
+      "edge_id": "e_c2_3",
+      "source_node_id": "n2",
+      "target_node_id": "n7",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraph 26"
+    },
+    {
+      "edge_id": "e_c2_4",
+      "source_node_id": "n2",
+      "target_node_id": "n8",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "paragraph 29"
+    },
+    {
+      "edge_id": "e_c4_1",
+      "source_node_id": "n1",
+      "target_node_id": "n12",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "earthquake claim discussion"
+    },
+    {
+      "edge_id": "e_c4_2",
+      "source_node_id": "n3",
+      "target_node_id": "n13",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "July 2020 Flooding Claim section"
+    },
+    {
+      "edge_id": "e_c4_3",
+      "source_node_id": "n2",
+      "target_node_id": "n13",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "July 2020 Flooding Claim section"
+    },
+    {
+      "edge_id": "e_c4_4",
+      "source_node_id": "n4",
+      "target_node_id": "n14",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "gas piping change discussion"
+    },
+    {
+      "edge_id": "e_c4_5",
+      "source_node_id": "n2",
+      "target_node_id": "n15",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "Options claim section"
+    },
+    {
+      "edge_id": "e_c4_6",
+      "source_node_id": "n8",
+      "target_node_id": "n17",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "roofing materials delay section"
+    },
+    {
+      "edge_id": "e_c4_7",
+      "source_node_id": "n5",
+      "target_node_id": "n18",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "BZ Phase discussion"
+    },
+    {
+      "edge_id": "e_c4_8",
+      "source_node_id": "n6",
+      "target_node_id": "n18",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "July 2021 flooding discussion"
+    },
+    {
+      "edge_id": "e_c4_9",
+      "source_node_id": "n7",
+      "target_node_id": "n18",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "Void Forms replacement discussion"
+    },
+    {
+      "edge_id": "e_c5_1",
+      "source_node_id": "n2",
+      "target_node_id": "n19",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "gov't mot. at 44-46"
+    },
+    {
+      "edge_id": "e_c5_2",
+      "source_node_id": "n5",
+      "target_node_id": "n22",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "SOF ¶ 28"
+    },
+    {
+      "edge_id": "e_c5_3",
+      "source_node_id": "n7",
+      "target_node_id": "n22",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "SOF ¶ 28"
+    },
+    {
+      "edge_id": "e_c5_4",
+      "source_node_id": "n1",
+      "target_node_id": "n23",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "gov't mot. at 47"
+    },
+    {
+      "edge_id": "e_c5_5",
+      "source_node_id": "n2",
+      "target_node_id": "n23",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "gov't mot. at 47"
+    },
+    {
+      "edge_id": "e_c5_6",
+      "source_node_id": "n9",
+      "target_node_id": "n25",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "gov't mot. at 48-49"
+    },
+    {
+      "edge_id": "e_c5_7",
+      "source_node_id": "n10",
+      "target_node_id": "n27",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "gov't mot. at 49-50"
+    },
+    {
+      "edge_id": "e_c5_8",
+      "source_node_id": "n11",
+      "target_node_id": "n29",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "gov't mot. at 51"
+    },
+    {
+      "edge_id": "e_c6_1",
+      "source_node_id": "n31",
+      "target_node_id": "n12",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. opp'n at 41-42"
+    },
+    {
+      "edge_id": "e_c6_2",
+      "source_node_id": "n31",
+      "target_node_id": "n13",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. opp'n at 41-42"
+    },
+    {
+      "edge_id": "e_c6_3",
+      "source_node_id": "n31",
+      "target_node_id": "n14",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. opp'n at 41-42"
+    },
+    {
+      "edge_id": "e_c6_4",
+      "source_node_id": "n31",
+      "target_node_id": "n24",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. opp'n at 41-42"
+    },
+    {
+      "edge_id": "e_c6_5",
+      "source_node_id": "n31",
+      "target_node_id": "n26",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. opp'n at 41-42"
+    },
+    {
+      "edge_id": "e_c6_6",
+      "source_node_id": "n31",
+      "target_node_id": "n28",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. opp'n at 41-42"
+    },
+    {
+      "edge_id": "e_c6_7",
+      "source_node_id": "n31",
+      "target_node_id": "n30",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. opp'n at 41-42"
+    },
+    {
+      "edge_id": "e_c7_1",
+      "source_node_id": "n31",
+      "target_node_id": "n32",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "paragraph 16-17 and surrounding text"
+    }
+  ],
+  "extraction_notes": [
+    "COVID-19 impacts classified as 'unclassified' as no specific event_type exists for pandemic-related disruptions",
+    "Multiple modification releases mentioned but not extracted as they represent dispute resolution rather than causal events",
+    "The exact causal relationship between weather and material shortages for roofing (n8) is ambiguous - both COVID and weather are cited as causes",
+    "The government contested some of the delay days claimed for weather events, but accepted others",
+    "The part describes multiple scope changes but does not explicitly establish causal relationships with previously extracted delay events. The release language in modifications suggests potential dispute over causal attribution.",
+    "Multiple modification agreements with release language created legal disputes over what claims were settled versus still actionable",
+    "Temporal ambiguity exists for several events (e.g., roofing delay timing) affecting accord and satisfaction determinations",
+    "Multiple summary judgment motions and rulings consolidated into single nodes for clarity. All events in this part relate to equitable adjustment disputes over previously documented events.",
+    "Court rejected A4's economic duress allegations, finding no evidence of coercion or wrongful government action. The causal edges reflect A4's allegations rather than court findings.",
+    "Node n32 appears to be a more detailed elaboration of the economic duress claim previously referenced in n31 from earlier parts, but is treated as a separate node due to additional specific details about the coercion mechanisms (liquidated damages threats, payment withholding)"
+  ]
+}

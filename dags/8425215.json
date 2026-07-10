@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1",
+  "case_id": "8425215",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Vought Construction Inc. v. Stock",
+    "court": "California Court of Appeal",
+    "date_filed": "2022-10-24",
+    "project_type": "construction",
+    "government_contract_number": null
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Stock withheld $79,000 progress payment from Vought based on a claim for $53,000 in liquidated damages for project delays.",
+      "date": "2020-08-14",
+      "date_confidence": "exact",
+      "source_citation": "paragraph discussing August 2020 payment withholding",
+      "source_excerpt": "Stock withheld the $79,000 progress payment based on his good faith claim for liquidated damages, which gave him an argument for why the withheld monies were no longer due",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Vought could not install railings due to incomplete design drawings, requiring architectural drawings and shop drawings to be generated before fabrication could begin.",
+      "date": "2020-01-24",
+      "date_confidence": "exact",
+      "source_citation": "paragraph discussing railings design issue",
+      "source_excerpt": "Contract did not include complete design drawings for railings; Vought could not install railings with information available on February 15, 2020; needed architectural and shop drawings.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Stock added tiling work to the stairs in January 2020, which affected the design of the railings attached to those stairs.",
+      "date": "2020-01",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph discussing tiling addition",
+      "source_excerpt": "Stock added new scope of work involving tiling stairs in January 2020, affecting railing design; tiling design not delivered until February 25.",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n2",
+      "target_node_id": "n1",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "court's delay findings paragraph"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n3",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "alleged_only",
+      "source_citation": "Vought's arguments about tiling impact"
+    }
+  ],
+  "extraction_notes": [
+    "The text discusses liquidated damages claims but does not specify the underlying causes of delay that triggered these damages. The actual delay events (weather, design issues, etc.) are not described in this part.",
+    "The court found Vought's 98-day delay in addressing railings was causally separate from Stock's later actions, though Vought alleged Stock's scope change caused the design issues. The causal link between n3 and n2 is alleged but not court-established."
+  ]
+}

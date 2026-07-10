@@ -1,0 +1,417 @@
+{
+  "schema_version": "0.1",
+  "case_id": "9442332",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Sungjee Construction Co., Ltd.",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2023-07-11",
+    "project_type": "military dormitory repair with architectural, civil, mechanical, and electrical work",
+    "government_contract_number": "W91QVN-14-D-0050"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "late_award",
+      "category": "owner_client_caused",
+      "description": "Contract award occurred on August 14, 2014, establishing the baseline contractual relationship for subsequent task orders.",
+      "date": "2014-08-14",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 1",
+      "source_excerpt": "On August 14, 2014, the 411 CSB awarded Sungjee indefinite-delivery, indefinite-quantity (IDIQ) Contract No. W91QVN-14-D-0050",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "late_award",
+      "category": "owner_client_caused",
+      "description": "Task order award occurred on June 30, 2016, initiating the specific dormitory repair project with a defined scope and completion deadline.",
+      "date": "2016-06-30",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 3",
+      "source_excerpt": "On June 30, 2016, the 411 CSB issued fixed-priced Task Order No. W91QVN-14-D-0050, call order No. 0026",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Sungjee was delinquent in submitting base access pass requests for most employees by September 23, 2016, despite work starting in early September.",
+      "date": "2016-09-23",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 6",
+      "source_excerpt": "Sungjee did not request passes for most of its employees until late September and was delinquent at project start",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Sungjee cited adverse weather conditions as a reason for requesting time extensions in August and December 2017.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraphs 7, 9",
+      "source_excerpt": "Sungjee experienced issues relating to cold weather and requested extensions due to adverse weather conditions",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Sungjee performed additional work for user convenience and potential future problems, cited as justification for time extension requests.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraphs 7, 9",
+      "source_excerpt": "Sungjee performed additional work for user's convenience and potential problems in the future",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "COR report on February 6, 2018 stated Sungjee had only 15 employees on site, which was insufficient manpower and caused schedule delays.",
+      "date": "2018-02-06",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 18",
+      "source_excerpt": "Contractor had 15 employees on the contract, which was not enough manpower and behind schedule by about three months",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Sungjee admitted to serious financial problems in December 2017 that impacted project performance and their ability to afford considerations.",
+      "date": "2017-12-28",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 13",
+      "source_excerpt": "Sungjee admitted it was having serious financial problems and these problems impacted the project",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "Sungjee had only 4 workers on site on March 13, 2018, far below the required 12-15 workers needed to complete the project by the April 9 deadline.",
+      "date": "2018-03-13",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 22",
+      "source_excerpt": "Chief of Project Management stated only four workers were on site for a project that needed 12-15 to be completed by April 9, 2018",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Government issued suspension of work order on March 14, 2018 due to Sungjee's lack of manpower, absenteeism of key personnel, and being behind schedule.",
+      "date": "2018-03-14",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 23",
+      "source_excerpt": "Contracting officer issued suspension of work order due to lack of overall manpower and absenteeism of Project Foreman and Quality Assurance Manager",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n10",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "Sungjee's subcontractor employees left for another job during the two-day suspension period, further reducing available manpower.",
+      "date": "2018-03-16",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 26",
+      "source_excerpt": "During the two-day suspension, the subcontractor's employees left for another job",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n11",
+      "event_type": "permit_delay",
+      "category": "regulatory_thirdparty",
+      "description": "Sungjee failed to renew base passes for employees from October 2017 through March 2018, believing the delay was their fault, and submitted defective applications in late March.",
+      "date": "2017-10-01",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 27",
+      "source_excerpt": "Sungjee failed to request base passes for most employees from October 2017 through March 2018 and submitted defective applications",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n12",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "COR report on March 22, 2018 showed only 8 workers on site, with 3 being managers rather than productive labor.",
+      "date": "2018-03-22",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 28",
+      "source_excerpt": "COR daily inspection report stated contractor's workforce consisted of eight individuals with three being managers",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n13",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "Despite base pass renewal, manpower remained low in April 2018, requiring another extension to June 2018.",
+      "date": "2018-04-30",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 30",
+      "source_excerpt": "COR monthly report stated manpower still low despite base pass renewal, requiring another extension for June 2018",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n14",
+      "event_type": "inspection_failure",
+      "category": "regulatory_thirdparty",
+      "description": "Government issued contract deficiency report on June 5, 2018 for installing non-fire-rated doors that did not meet specifications.",
+      "date": "2018-06-05",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 36",
+      "source_excerpt": "Government issued contract deficiency report stating Sungjee installed doors that were not fire rated in accordance with specifications",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n15",
+      "event_type": "inspection_failure",
+      "category": "regulatory_thirdparty",
+      "description": "Government issued contract deficiency reports (CDRs) in June 2018 identifying non-compliant work, including installation of non-fire-rated doors that failed to meet specifications.",
+      "date": "2018-06",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 38",
+      "source_excerpt": "Government issued CDRs in June 2018, Sungjee concurred that doors were not fire-rated due to failure to check materials before installation",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n16",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "COR report for June 2018 indicated 'no manpower' on site, requiring another contract extension due to insufficient workforce.",
+      "date": "2018-06",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 38",
+      "source_excerpt": "COR report for June 2018 stated there was no manpower and another contract extension was needed",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n17",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Sungjee admitted to falsifying quality control plan and submitting fraudulent engineer architecture certifications for two employees in August 2018.",
+      "date": "2018-08-28",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 55",
+      "source_excerpt": "Sungjee informed government it falsified QC plan and certifications, taking full responsibility for fraudulent paperwork",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n18",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "Government email on September 6, 2018 documented only 2-3 personnel on site, indicating severe manpower shortage.",
+      "date": "2018-09-06",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 57",
+      "source_excerpt": "Lack of Manpower - Only 2-3 personnel on site",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n19",
+      "event_type": "permit_delay",
+      "category": "regulatory_thirdparty",
+      "description": "Sungjee failed to submit new base pass applications since May 2018, continuing access permit issues.",
+      "date": "2018-09-06",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 57",
+      "source_excerpt": "No Effort to Ensure Base Access - No new passes have been submitted since May",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n20",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Government issued suspension of work order on September 20, 2018, instructing Sungjee to stop all work immediately.",
+      "date": "2018-09-20",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 63",
+      "source_excerpt": "contracting officer issued a suspension of work order instructing Sungjee to immediately stop all work",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n21",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government terminated task order for default on December 20, 2018 due to failure to complete work by completion date.",
+      "date": "2018-12-20",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 65",
+      "source_excerpt": "government issued Modification No. 04 terminating the task order for default for failing to complete work by completion date",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n22",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Sungjee filed notice of appeal on September 9, 2019, challenging the default termination and seeking monetary damages for improper termination.",
+      "date": "2019-09-09",
+      "date_confidence": "exact",
+      "source_citation": "paragraph 76",
+      "source_excerpt": "On September 9, 2019, Sungjee filed its notice of appeal/complaint on this COFD",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n23",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Government contract specialist emailed Sungjee on August 2, 2018 requesting progress schedule and instructing them not to work at site until further notice.",
+      "date": "2018-08-02",
+      "date_confidence": "exact",
+      "source_citation": "discussion of second argument",
+      "source_excerpt": "contract specialist's August 2, 2018 email requesting a progress schedule and ordering appellant not to work at the site until told to do so",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n24",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Sungjee argued that constant changes in government personnel caused poor management and delays, but the board found no evidence supporting this claim.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "first paragraph",
+      "source_excerpt": "Sungjee argues constant change in government personnel caused poor management and delays, but board found no evidence this impacted project progress",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c1_1",
+      "source_node_id": "n3",
+      "target_node_id": "n6",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "paragraphs 6, 18"
+    },
+    {
+      "edge_id": "e_c1_2",
+      "source_node_id": "n7",
+      "target_node_id": "n6",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "paragraph 13"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n6",
+      "target_node_id": "n8",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraphs 21-22"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n8",
+      "target_node_id": "n9",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "paragraph 23"
+    },
+    {
+      "edge_id": "e_c2_3",
+      "source_node_id": "n9",
+      "target_node_id": "n10",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "paragraph 26"
+    },
+    {
+      "edge_id": "e_c2_4",
+      "source_node_id": "n11",
+      "target_node_id": "n13",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraphs 27, 30"
+    },
+    {
+      "edge_id": "e_c2_5",
+      "source_node_id": "n3",
+      "target_node_id": "n11",
+      "relationship": "contributed_to",
+      "causal_strength": "implied",
+      "source_citation": "paragraphs 3, 27"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n15",
+      "target_node_id": "n14",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraph 38"
+    },
+    {
+      "edge_id": "e_c3_2",
+      "source_node_id": "n7",
+      "target_node_id": "n16",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "paragraph 42"
+    },
+    {
+      "edge_id": "e_c3_3",
+      "source_node_id": "n16",
+      "target_node_id": "n13",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraph 38"
+    },
+    {
+      "edge_id": "e_c4_1",
+      "source_node_id": "n18",
+      "target_node_id": "n20",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraphs 57, 63"
+    },
+    {
+      "edge_id": "e_c4_2",
+      "source_node_id": "n19",
+      "target_node_id": "n18",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraph 57"
+    },
+    {
+      "edge_id": "e_c4_3",
+      "source_node_id": "n11",
+      "target_node_id": "n19",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraph 57"
+    },
+    {
+      "edge_id": "e_c4_4",
+      "source_node_id": "n20",
+      "target_node_id": "n21",
+      "relationship": "contributed_to",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "paragraphs 63, 65"
+    },
+    {
+      "edge_id": "e_c5_1",
+      "source_node_id": "n21",
+      "target_node_id": "n22",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "paragraph 76"
+    },
+    {
+      "edge_id": "e_c5_2",
+      "source_node_id": "n23",
+      "target_node_id": "n21",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "discussion of second argument"
+    }
+  ],
+  "extraction_notes": [
+    "Financial problems (n7) classified as unclassified as no specific event_type matches this category",
+    "Pass request delays (n3) classified as unclassified as no specific event_type matches base access processing delays",
+    "The base pass issues appear to be a continuation of the earlier delinquency noted in n3, but represent ongoing/renewed problems warranting a new node. The causal relationship between financial problems (n7) and resource shortages is implied but not explicitly stated in this part.",
+    "The CDRs in June 2018 appear to be related to but distinct from the June 5, 2018 inspection failure (n14), showing ongoing quality issues. The manpower shortage in June 2018 (n16) continues the pattern established in earlier resource shortage nodes.",
+    "The mold issue mentioned in paragraph 57 is not classified as it doesn't clearly fit any specific event_type category and its causal impact is unclear",
+    "The contract specialist's instruction to stop work (n23) was alleged by Sungjee to contribute to delay, but the court found the specialist lacked authority to issue such orders, making this a contested causal claim.",
+    "The personnel change argument was rejected by the board, so no causal edges were created. The text primarily addresses legal arguments rather than new factual events."
+  ]
+}

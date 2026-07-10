@@ -1,0 +1,98 @@
+{
+  "schema_version": "0.1",
+  "case_id": "9471989",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "KUNJ Construction Corporation",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2024-01-25",
+    "project_type": "fire system replacement at naval facility",
+    "government_contract_number": "N40085-16-D-0302"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "Navy failed to provide sufficient escorts for secure building access, with escorts frequently late or not appearing, delaying work progress.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 16",
+      "source_excerpt": "Navy did not supply sufficient escorts, or escorts were late or failed to appear, delaying KUNJ's work.",
+      "extraction_confidence": "alleged_only"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "Navy's sanitization efforts (covering sensitive machinery) precluded KUNJ from working, causing delays.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 16",
+      "source_excerpt": "KUNJ was delayed when precluded from working because of Navy's sanitization efforts.",
+      "extraction_confidence": "alleged_only"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "Navy caused delays through building access issues and other activities that prevented KUNJ from completing work as scheduled.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 17",
+      "source_excerpt": "Navy responsible for delays caused by building access issues and other Navy activities preventing work completion.",
+      "extraction_confidence": "alleged_only"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "permit_delay",
+      "category": "regulatory_thirdparty",
+      "description": "Navy delayed providing necessary authorization to transmitter manufacturer to sell units to KUNJ's subcontractor.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 18",
+      "source_excerpt": "Navy delayed authorization to manufacturer to sell radio frequency transmitters to subcontractor.",
+      "extraction_confidence": "alleged_only"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "permit_delay",
+      "category": "regulatory_thirdparty",
+      "description": "Navy delayed approving use of a PED camera, causing KUNJ significant loss of time.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 19",
+      "source_excerpt": "Navy delayed approving use of PED camera, causing significant time loss.",
+      "extraction_confidence": "alleged_only"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Navy directed relocation of conduit that KUNJ had installed in a Navy-approved location.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "paragraph 20",
+      "source_excerpt": "Navy directed relocation of conduit installed in Navy-approved location.",
+      "extraction_confidence": "alleged_only"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "late_possession_of_site",
+      "category": "owner_client_caused",
+      "description": "Navy delayed allowing KUNJ access to Building 20, then delayed implementing after-hours work arrangement due to funding issues.",
+      "date": "2018-10",
+      "date_confidence": "approximate",
+      "source_citation": "paragraph 21",
+      "source_excerpt": "Navy delayed access to Building 20, then delayed implementing after-hours work due to funding issues in October 2018.",
+      "extraction_confidence": "alleged_only"
+    }
+  ],
+  "edges": [],
+  "extraction_notes": [
+    "All nodes in this part are alleged by KUNJ but not yet proven or adjudicated. The Navy disputes these claims and raises affirmative defenses of accord and satisfaction through modifications.",
+    "Part 2 primarily contains contract specifications, security requirements, and legal arguments about accord and satisfaction defenses rather than new delay events. No new causal events matching the predefined event_types were found in this section.",
+    "Part 3 focuses on legal arguments about release clauses and summary judgment motions rather than describing new causal events. The text discusses whether previous delay claims (referenced in nodes n1-n7) are barred by contractual modifications, but does not introduce new delay events or causal relationships.",
+    "Part 4 contains only legal arguments and procedural rulings about contract interpretation and documentation requirements, with no new factual events or causal relationships described that would require node or edge extraction"
+  ]
+}

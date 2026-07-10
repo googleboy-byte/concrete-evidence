@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1",
+  "case_id": "4396217",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "Walsh Construction Co. v. United States",
+    "court": "United States Court of Federal Claims",
+    "date_filed": "2017-05-31",
+    "project_type": "construction of drilled piers for building foundation",
+    "government_contract_number": null
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Goettle encountered large slabs of rock, weathered rock, voids, open fractures, and open joints during drilling of five shafts (L-2, L-3, L-4, N.8-3, N.8-4), causing shaft collapses.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Amend. Compl. ¶¶ 35-38",
+      "source_excerpt": "During drilling of Five Problem Shafts, Goettle encountered large slabs of rock, weathered rock, voids, open fractures and open joints causing shaft collapses",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Army Corps conducted repeated inspections and re-inspections of drilled shafts, requiring Goettle to move equipment back 471 times to re-drill shafts to revised tip elevations.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Amend. Compl. ¶15, ¶27",
+      "source_excerpt": "Army Corps recalculated tip elevations after drilling, requiring Goettle to move equipment back to previously drilled shafts for re-drilling",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "resource_shortage",
+      "category": "contractor_caused",
+      "description": "Goettle acquired additional drilling equipment and personnel to adhere to project schedule despite additional work from re-inspections.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "Amend. Compl. ¶28",
+      "source_excerpt": "Goettle required to acquire additional drilling equipment and personnel to adhere to Project schedule",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_c1_1",
+      "source_node_id": "n2",
+      "target_node_id": "n3",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "Amend. Compl. ¶28"
+    }
+  ],
+  "extraction_notes": [
+    "Node n2 (inspection/re-inspection process) does not cleanly fit any predefined event_type - marked as unclassified as it involves contractually mandated inspections but allegedly excessive implementation",
+    "The causal relationship between n2 and n3 is explicitly stated in the complaint text",
+    "This part contains only legal arguments about jurisdiction and claim presentation procedures - no new factual events related to construction delays or causal relationships are described. The text discusses procedural history of claims already extracted in previous parts.",
+    "Part 3 contains only procedural and jurisdictional discussions about claims processing, not new factual events related to construction delays or causal relationships. No new causal events or relationships described in this text portion."
+  ]
+}

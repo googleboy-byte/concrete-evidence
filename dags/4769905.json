@@ -1,0 +1,476 @@
+{
+  "schema_version": "0.1",
+  "case_id": "4769905",
+  "taxonomy_version": "0.1",
+  "case_metadata": {
+    "case_name": "RBC Construction Corp.",
+    "court": "Armed Services Board of Contract Appeals",
+    "date_filed": "2020-07-09",
+    "project_type": "military facility design/build construction",
+    "government_contract_number": "W912QR-ll-C-0046"
+  },
+  "nodes": [
+    {
+      "node_id": "n1",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed approval of site and foundation package due to repeated requests for additional fire cistern calculations, exceeding the contractual 14-day review period.",
+      "date": "2012-02-23",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 13 at GR4_2204",
+      "source_excerpt": "Government reviewer opened comments on Feb 23, 2012 requesting preliminary calculations for fire cistern, with subsequent delays in approval.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n2",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Work on site and foundation package halted pending government approval of fire cistern design calculations and hydraulic data.",
+      "date": "2012-03-29",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 14 at GR4_2212",
+      "source_excerpt": "RBC submitted corrected final site package on March 29, but government continued questioning cistern design, preventing approval.",
+      "extraction_confidence": "implied"
+    },
+    {
+      "node_id": "n3",
+      "event_type": "differing_site_conditions",
+      "category": "site_conditions",
+      "description": "Contractor discovered two underground pipes containing asbestos that were not indicated in contract documents, requiring unexpected remediation work.",
+      "date": "2012-09-13",
+      "date_confidence": "exact",
+      "source_citation": "tr. 1/57-58, 3/67; 59404 answer at 6 ¶ 18",
+      "source_excerpt": "On September 13, 2012, after start of construction, RBC discovered two underground pipes possibly containing asbestos",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n4",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Work stopped immediately upon discovery of suspected hazardous materials as required by contract, awaiting government direction before proceeding.",
+      "date": "2012-10-04",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 4 at GR4_323-24 ¶ 1.7.3",
+      "source_excerpt": "RBC stopped work due to presence of asbestos as contract required immediate work stoppage in affected areas",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n5",
+      "event_type": "sequencing_error",
+      "category": "contractor_caused",
+      "description": "Contractor performed backfill operations at training building out of planned sequence between October 3-18, 2012, which was inefficient work according to expert testimony.",
+      "date": "2012-10-03",
+      "date_confidence": "approximate",
+      "source_citation": "app. supp. R4, tab 118 at 21; tr. 2/216",
+      "source_excerpt": "Backfill performed between October 3-18, 2012 was performed out of sequence and was inefficient work",
+      "extraction_confidence": "expert_opinion_disputed"
+    },
+    {
+      "node_id": "n6",
+      "event_type": "permit_delay",
+      "category": "regulatory_thirdparty",
+      "description": "Contractor could not apply for environmental permits for asbestos removal until scope of abatement work was resolved, including fuel residue flushing requirements.",
+      "date": "2012-11-20",
+      "date_confidence": "approximate",
+      "source_citation": "tr. 3/68-69",
+      "source_excerpt": "Could not apply for permits until resolving scope of abatement work including whether pipes needed flushing",
+      "extraction_confidence": "implied"
+    },
+    {
+      "node_id": "n7",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government requested changes to OMS building interior layout after concrete floor slab was already poured, requiring room shuffling and redesign.",
+      "date": "2013-03-19",
+      "date_confidence": "exact",
+      "source_citation": "tr. 5/121-23",
+      "source_excerpt": "End-user requested tool room be adjacent to work bay after noticing design didn't require adjacency, USACE issued RFP",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n8",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "OMS building interior work was constructively stopped pending government approval of redesign for layout changes.",
+      "date": "2013-10-15",
+      "date_confidence": "approximate",
+      "source_citation": "app. supp. R4, tab 117 at 15",
+      "source_excerpt": "OMS interior work was delayed until January 2014 because work was constructively stopped until redesign approved",
+      "extraction_confidence": "alleged_only"
+    },
+    {
+      "node_id": "n9",
+      "event_type": "concurrent_delay",
+      "category": "schedule_management",
+      "description": "The Board found that delays prior to June 1, 2012 were concurrent with delays that were RBC's responsibility, as the government identified numerous deficiencies in RBC's site and foundation package requiring resubmission.",
+      "date": "2012-02-24",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 13 at GR4_2173",
+      "source_excerpt": "We find that any delay prior to June 1, 2012 was concurrent with delays that were RBC's responsibility due to numerous deficiencies requiring resubmission.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n10",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of RBC's corrected site and foundation package by 11 days beyond the contractual 14-day review period, taking 25 days to respond to submission made March 29, 2012.",
+      "date": "2012-04-23",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 13 at GR4_2204, tab 14 at GR4_2212",
+      "source_excerpt": "Government took 25 days to review submission instead of contractual 14 days, resulting in 11-day delay from April 13-23, 2012.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n11",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Government requirement that RBC address fire cistern in site and foundation package caused delay from June 2-21, 2012, as this was not contractually required until interim design phase.",
+      "date": "2012-06-21",
+      "date_confidence": "exact",
+      "source_citation": "gov't resp. br. at 37",
+      "source_excerpt": "Government delayed approval by requiring fire cistern calculations in site package, causing 20-day delay from June 2-21, 2012.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n12",
+      "event_type": "scope_change",
+      "category": "owner_client_caused",
+      "description": "Government directed RBC to install 26 kitchen equipment items on August 25, 2014, which RBC contended was not required by the original contract but performed under protest.",
+      "date": "2014-08-25",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 112 at SGR4_3671; 59404 et al. answer at 3 ¶ 10",
+      "source_excerpt": "Government directed RBC to install 26 kitchen equipment items via letter CPN-C-0078, excluding Option B items.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n13",
+      "event_type": "material_shortage",
+      "category": "procurement_material",
+      "description": "Kitchen equipment was not available in Puerto Rico and had to be shipped from the continental United States, causing procurement and delivery delays of approximately 10 weeks.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "tr. 8/141-143; app. proposed finding of fact ¶ 198",
+      "source_excerpt": "Equipment was not available locally and required shipping from mainland US, taking about 10 weeks for procurement and delivery.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n14",
+      "event_type": "unclassified",
+      "category": "unclassified",
+      "description": "Government refused to provide IVU tax exemption documentation for materials purchases after initially agreeing to do so, causing RBC to pay $198,546.11 in taxes that it claims should have been exempt.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "multiple citations throughout text",
+      "source_excerpt": "Government refused to provide RBC IVU exemption documentation when requested for subsequent purchases of materials for the project",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n15",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of built-up roofing submittal 07 52 00-1 by 15 days beyond the contractual 14-day review period, rejecting it on June 17, 2013.",
+      "date": "2013-06-17",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 152 at GR4_4416; tr. 6/10; 60277 answer at 4 ¶ 17",
+      "source_excerpt": "Government rejection provided 15 days outside of contractual 14-day review period",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n16",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "Construction on built-up roof stopped due to government rejection of submittal 07 52 00-1, halting work pending resubmission and approval.",
+      "date": "2013-06-17",
+      "date_confidence": "exact",
+      "source_citation": "tr. 1/100; 60277 answer at 5-6 ¶ 19; app. supp. R4, tab 20 at 27",
+      "source_excerpt": "Government rejection caused construction on built-up roof to stop",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n17",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of standing seam roofing submittal 07 41 13.16-1.1 by one day beyond contractual review period, rejecting it on September 25, 2013.",
+      "date": "2013-09-25",
+      "date_confidence": "exact",
+      "source_citation": "60277 answer at 8 ¶ 25; R4, tab 176 at GR4_4846",
+      "source_excerpt": "Rejection occurred one day outside 14-day review period based on September 10 submission",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n18",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of standing seam roofing submittal 07 41 13.16-1.3 by 9 days beyond contractual review period, providing conditional approval on January 8, 2014.",
+      "date": "2014-01-08",
+      "date_confidence": "exact",
+      "source_citation": "tr. 6/25-26; R4, tab 184 at GR4_5088",
+      "source_excerpt": "Government response occurred 9 days outside 14-day review period",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n19",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of standing seam roofing submittal 07 41 13.16-1.4 by 29 days beyond contractual review period, providing conditional approval on February 26, 2014.",
+      "date": "2014-02-26",
+      "date_confidence": "exact",
+      "source_citation": "tr. 6/28-29; R4, tab 187 at GR4_5119-20",
+      "source_excerpt": "Government response provided 29 days outside 14-day review period",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n20",
+      "event_type": "design_freeze",
+      "category": "design_information",
+      "description": "OMS standing seam roofing work was stopped due to government comments and rejections of submittals, halting progress pending resolution.",
+      "date": null,
+      "date_confidence": "inferred",
+      "source_citation": "app. supp. R4, tab 20 at 29, 31, 33, 35, 37, 40",
+      "source_excerpt": "OMS standing seam roofing system was at a stop due to government comments on submittals",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n21",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of built-up roofing submittal 07 52 00-1 by 15 days beyond the contractual 14-day review period, rejecting it on June 18, 2013.",
+      "date": "2013-06-18",
+      "date_confidence": "exact",
+      "source_citation": "R4, tab 152 at GR4_4417",
+      "source_excerpt": "Government provided comments 29 days after submission (May 20, 2013), 15 days beyond contractual period",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n22",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of first revised standing seam roofing submittal by one day beyond the contractual 14-day review period, taking 15 days total.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "R4, tab 176 at GR4_4845",
+      "source_excerpt": "Government took 15 days to review first revised standing seam roofing submission, one day longer than contract permitted.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n23",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of third revised standing seam roof submittal by 9 days beyond contractual period, taking 23 days total to provide comments.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "R4, tab 184",
+      "source_excerpt": "Government took 23 days to provide comments on third revised standing seam roof submittal, nine days longer than permitted.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n24",
+      "event_type": "rfi_delay",
+      "category": "design_information",
+      "description": "Government delayed review of fourth revised standing seam roof submittal by 29 days beyond contractual period, taking 43 days total to respond.",
+      "date": null,
+      "date_confidence": "undated",
+      "source_citation": "R4, tab 187",
+      "source_excerpt": "Government took 43 days to respond to fourth revised standing seam roof submittal, 29 days longer than permitted.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n25",
+      "event_type": "concurrent_delay",
+      "category": "schedule_management",
+      "description": "Board found 31 days of concurrent delay from June 18 to July 19, 2013, due to government's improper requests for test results not required by contract in roofing submittal approvals.",
+      "date": "2013-06-18",
+      "date_confidence": "exact",
+      "source_citation": "Board finding in part 8 text",
+      "source_excerpt": "31 days of concurrent delay from June 18, 2013, to July 19, 2013, due to government's requests for test results not required by contract.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n26",
+      "event_type": "weather_delay",
+      "category": "weather_seasonal",
+      "description": "Drought conditions in Puerto Rico from May-July 2015 restricted water usage and prevented proper turf establishment maintenance as required by contract.",
+      "date": "2015-05-12",
+      "date_confidence": "exact",
+      "source_citation": "app. supp. R4, tab 67 at 2, 5-9; tr. 5/89",
+      "source_excerpt": "Drought in Puerto Rico with water use restrictions starting May 2015 prevented proper watering of turf during establishment period.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n27",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government assessed $637,070 in liquidated damages for 479 days of delay from November 17, 2013 to March 10, 2015 at $1,330 per day.",
+      "date": "2013-11-17",
+      "date_confidence": "exact",
+      "source_citation": "59404 et al. answer at 16 ¶ 48",
+      "source_excerpt": "Government assessed liquidated damages of $1,330 per day from November 17, 2013 to March 10, 2015 totaling $637,070.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n28",
+      "event_type": "liquidated_damages_trigger",
+      "category": "financial",
+      "description": "Government assessed $94,122 in pro-rated liquidated damages for 126 days from March 11, 2015 to July 14, 2015 at $747 per day during partial occupancy.",
+      "date": "2015-03-11",
+      "date_confidence": "exact",
+      "source_citation": "59404 et al. answer at 16 ¶ 48",
+      "source_excerpt": "Government assessed pro-rated liquidated damages of $747 per day from March 11 to July 14, 2015 totaling $94,122.",
+      "extraction_confidence": "explicit"
+    },
+    {
+      "node_id": "n29",
+      "event_type": "critical_path_impact",
+      "category": "schedule_management",
+      "description": "Board found that the critical path shifted to the OMS building in July or August 2013, making government-caused delays on that building compensable.",
+      "date": "2013-07",
+      "date_confidence": "approximate",
+      "source_citation": "VII. Delay Calculations section",
+      "source_excerpt": "We find that the critical path shifted to the OMS building. The one day of delay ending on September 25, 2013... are on the critical path and compensable.",
+      "extraction_confidence": "explicit"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1_2",
+      "source_node_id": "n1",
+      "target_node_id": "n2",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_disputed",
+      "source_citation": "R4, tab 13 at GR4_2204-07"
+    },
+    {
+      "edge_id": "e_c2_1",
+      "source_node_id": "n3",
+      "target_node_id": "n4",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "R4, tab 4 at GR4_323-24 ¶ 1.7.3"
+    },
+    {
+      "edge_id": "e_c2_2",
+      "source_node_id": "n3",
+      "target_node_id": "n6",
+      "relationship": "caused",
+      "causal_strength": "implied",
+      "source_citation": "tr. 3/68-69"
+    },
+    {
+      "edge_id": "e_c3_1",
+      "source_node_id": "n1",
+      "target_node_id": "n10",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "R4, tab 13 at GR4_2204, tab 14 at GR4_2212"
+    },
+    {
+      "edge_id": "e_c3_2",
+      "source_node_id": "n1",
+      "target_node_id": "n11",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "gov't resp. br. at 37"
+    },
+    {
+      "edge_id": "e_c4_1",
+      "source_node_id": "n12",
+      "target_node_id": "n13",
+      "relationship": "caused",
+      "causal_strength": "expert_opinion_undisputed",
+      "source_citation": "tr. 8/141-143; app. proposed finding of fact ¶ 198"
+    },
+    {
+      "edge_id": "e_c6_1",
+      "source_node_id": "n15",
+      "target_node_id": "n16",
+      "relationship": "caused",
+      "causal_strength": "explicit",
+      "source_citation": "tr. 1/100; 60277 answer at 5-6 ¶ 19"
+    },
+    {
+      "edge_id": "e_c7_1",
+      "source_node_id": "n21",
+      "target_node_id": "n16",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "R4, tab 152 at GR4_4417"
+    },
+    {
+      "edge_id": "e_c8_1",
+      "source_node_id": "n22",
+      "target_node_id": "n23",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "Board's summation of 39 total days delay from standing seam roofing submittals"
+    },
+    {
+      "edge_id": "e_c8_2",
+      "source_node_id": "n23",
+      "target_node_id": "n24",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "Board's summation of 39 total days delay from standing seam roofing submittals"
+    },
+    {
+      "edge_id": "e_c8_3",
+      "source_node_id": "n15",
+      "target_node_id": "n25",
+      "relationship": "caused",
+      "causal_strength": "court_finding",
+      "source_citation": "Board finding linking built-up roofing submittal delay to concurrent delay period"
+    },
+    {
+      "edge_id": "e_c9_1",
+      "source_node_id": "n26",
+      "target_node_id": "n28",
+      "relationship": "contributed_to",
+      "causal_strength": "alleged_only",
+      "source_citation": "app. br. at 37-38; R4, tab 4 at GR4_218"
+    },
+    {
+      "edge_id": "e_c10_1",
+      "source_node_id": "n7",
+      "target_node_id": "n29",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "VII. Delay Calculations section"
+    },
+    {
+      "edge_id": "e_c10_2",
+      "source_node_id": "n8",
+      "target_node_id": "n29",
+      "relationship": "contributed_to",
+      "causal_strength": "court_finding",
+      "source_citation": "VII. Delay Calculations section"
+    },
+    {
+      "edge_id": "e_c10_3",
+      "source_node_id": "n29",
+      "target_node_id": "n27",
+      "relationship": "mitigated",
+      "causal_strength": "court_finding",
+      "source_citation": "VII. Delay Calculations section"
+    },
+    {
+      "edge_id": "e_c10_4",
+      "source_node_id": "n29",
+      "target_node_id": "n28",
+      "relationship": "mitigated",
+      "causal_strength": "court_finding",
+      "source_citation": "VII. Delay Calculations section"
+    }
+  ],
+  "extraction_notes": [
+    "Government's 14-day review period vs actual 25+ day delay noted, but causal impact on critical path is contested per court's concurrent delay finding",
+    "Dispute exists regarding environmental board holiday closure timing affecting permit submission - marked as contested where appropriate",
+    "OMS building critical path status is contested between parties - marked alleged_only for design freeze node",
+    "The opinion contains detailed concurrent delay analysis that may require additional edges to fully capture the complex temporal relationships between RBC-caused and government-caused delays.",
+    "The court's denial of RBC's claim (ASBCA No. 59962) suggests the kitchen equipment directive was not a scope change but a contractual obligation, though RBC perceived it as such and incurred delays. The material_shortage node is extracted based on RBC's uncontested testimony about procurement logistics.",
+    "The tax exemption refusal event does not fit cleanly into any predefined event_type category. It involves contractual interpretation of tax obligations rather than traditional construction delay or performance issues.",
+    "Multiple roofing submittal rejections with repeated warranty requests that may be premature (closeout vs. construction phase). Government roofing expert Sweeton's comments appear inconsistent with contract requirements regarding specification usage and approval authority.",
+    "The text discusses multiple roofing submittals but only explicitly dates and quantifies the delay for the first built-up roofing submittal. Other delays mentioned appear to reference previously extracted nodes.",
+    "The 31-day concurrent delay period (n25) appears to relate to both built-up and standing seam roofing issues, but the exact causal relationships between specific submittal delays and the concurrent period require careful review.",
+    "The causal link between drought (n26) and liquidated damages (n28) is alleged by RBC but disputed by government witnesses who claimed RBC stopped watering before restrictions. The Board did not make a definitive finding on this causal relationship.",
+    "The critical path shift finding (n29) is a judicial determination rather than a physical event, but it directly affects delay responsibility and liquidated damages assessment."
+  ]
+}
